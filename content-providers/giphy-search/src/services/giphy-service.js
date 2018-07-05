@@ -7,10 +7,12 @@ export default class GiphyService {
         this.relevanceLanguage = 'en';
 
         this.search = this.search.bind(this);
+        this.sendEvent = this.sendEvent.bind(this);
         this.setApiKey = this.setApiKey.bind(this);
         this.setRelevanceLanguage = this.setRelevanceLanguage.bind(this);
         this.registerListener = this.registerListener.bind(this);
         this.deregisterListener = this.deregisterListener.bind(this);
+        this.onSearchCompleted = this.onSearchCompleted.bind(this);
     }
 
     registerListener(listener) {
@@ -22,7 +24,6 @@ export default class GiphyService {
     }
 
     setApiKey(key) {
-        console.log('API Key set...Whoop whoop!!!'); // eslint-disable-line no-console
         this.apiKey = key;
     }
 
@@ -35,24 +36,50 @@ export default class GiphyService {
             const params = {
                 api_key: this.apiKey,
                 q: searchParams.searchText,
-                limit: searchParams.itemsPerPage,
-                offset: searchParams.pageNumber - 1,
                 lang: this.relevanceLanguage,
+                limit: searchParams.itemsPerPage,
+                offset: (searchParams.pageNumber - 1) * searchParams.itemsPerPage,
+                rating: 'g',
             };
-
-            if (searchParams.ratingFilter) {
-                params.rating = searchParams.ratingFilter;
-            }
 
             axios({
                 method: 'get',
                 url: 'https://api.giphy.com/v1/gifs/search',
                 params,
             }).then((response) => {
-                resolve(response);
+                const configuredResponse = {
+                    pagination: {
+                        pageNumber: searchParams.pageNumber,
+                        itemsPerPage: searchParams.itemsPerPage,
+                        totalItems: response.data.pagination.total_count,
+                    },
+                    results: response.data.data.map(item => Object.assign(item, {
+                        key: item.id,
+                    })),
+                };
+                resolve(configuredResponse);
             }).catch((errorResponse) => {
                 reject(errorResponse);
             });
+        });
+    }
+
+    sendEvent({
+        paginationIsDisabled,
+        pagination,
+        results,
+    }) {
+        this.listeners.forEach(listener => typeof listener === 'function' && listener({
+            paginationIsDisabled,
+            pagination,
+            results,
+        }));
+    }
+
+    onSearchCompleted({ pagination }) {
+        this.sendEvent({
+            pagination,
+            paginationIsDisabled: false,
         });
     }
 

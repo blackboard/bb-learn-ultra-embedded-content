@@ -8,6 +8,6 @@ import '../../../library/styles/index.scss';
 import './styles/index.scss';
 
 ReactDOM.render(
-    <App title="Hello, content provider!" />,
+    <App />,
     document.getElementById('app'),
 );

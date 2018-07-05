@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
-import PropTypes from 'prop-types';
-import { MESSAGE_TYPES, EMBED_URL_PREFIX, WORKFLOW_STATES } from '../constants';
+import SearchResult from './search-result';
+import { MESSAGE_TYPES, SORT_FILTER_CONFIG, WORKFLOW_STATES } from '../constants';
 import {
+    configureSearchContainer,
     ButtonSecondary,
     Spinner,
 } from '../../../../library/react';
@@ -25,11 +26,15 @@ export default class App extends React.Component {
 
         // Helper methods
         this.GiphyService = new GiphyService();
+        this.searchContainer = configureSearchContainer(this.GiphyService, SearchResult);
         this.origin = document.referrer ? new URL(document.referrer).origin : document.origin;
         this.translate = (key, params) => translator('en', key, params);
 
         // Method binding
         this.getGiphyMashupConfig = this.getGiphyMashupConfig.bind(this);
+        this.getSearchPage = this.getSearchPage.bind(this);
+        this.onContentSelect = this.onContentSelect.bind(this);
+        this.onDismiss = this.onDismiss.bind(this);
         this.postMessage = this.postMessage.bind(this);
         this.receiveMessage = this.receiveMessage.bind(this);
         this.setCurrentLocale = this.setCurrentLocale.bind(this);
@@ -77,18 +82,24 @@ export default class App extends React.Component {
                 locale: 'en',
                 workflow: WORKFLOW_STATES.searching,
             });
-            this.GiphyService.search({
-                searchText: 'school',
-                itemsPerPage: 10,
-                pageNumber: 1,
-            }).then((response) => {
-                console.log('Giphy: ', response); // eslint-disable-line no-console
-                this.setState({
-                    searchResults: response.data,
-                });
-            }).catch((responseError) => {
-                console.log(responseError); // eslint-disable-line no-console
-            });
+        });
+    }
+
+    onContentSelect(selection) {
+        const message = {
+            dataContent: {
+                alt: selection.title,
+                src: selection.images.original.url,
+            },
+            dataType: 'image',
+            messageType: MESSAGE_TYPES.outgoing.contentReady,
+        };
+        this.postMessage(message);
+    }
+
+    onDismiss() {
+        this.postMessage({
+            messageType: MESSAGE_TYPES.outgoing.canceled,
         });
     }
 
@@ -120,20 +131,38 @@ export default class App extends React.Component {
         this.GiphyService.setRelevanceLanguage(locale);
     }
 
+    getSearchPage() {
+        const isEditing = this.state.workflow === WORKFLOW_STATES.editing;
+        const ThirdPartySearchContainer = this.searchContainer;
+        const defaultButtonText = this.translate('buttons.cancel');
+        const searchingPageTitle = this.translate('search.title');
+
+        let containerClassName = 'giphy-search-container';
+        if (isEditing) {
+            containerClassName += ' hidden';
+        }
+
+        return (
+            <div className={containerClassName}>
+                <div className="main-content pt-2">
+                    <h1 tabIndex="-1" className="px-4 my-2" ref={(el) => { this.title = el; }}>{searchingPageTitle}</h1>
+                    <ThirdPartySearchContainer
+                        onContentSelect={this.onContentSelect}
+                        translate={this.translate}
+                        sortFilterConfig={SORT_FILTER_CONFIG}
+                    />
+                </div>
+                <div className="footer-content text-right mt-4 py-3 px-4 border-t-2 border-grey-lighter">
+                    <ButtonSecondary onClick={this.onDismiss}>
+                        {defaultButtonText}
+                    </ButtonSecondary>
+                </div>
+            </div>
+        );
+    }
+
     render() {
-        const { title } = this.props;
-        const { searchResults } = this.state;
         const isLoading = this.state.workflow === WORKFLOW_STATES.loading;
-        const postMessageText = this.translate('buttons.postMessage');
-        // Let's mock a message that we will send to Bb Learn when our content is created/selected
-        const message = {
-            dataContent: {
-                src: EMBED_URL_PREFIX,
-            },
-            dataType: 'image',
-            messageType: MESSAGE_TYPES.outgoing.contentReady,
-        };
-        const postMessageToLearn = contentMessage => () => this.postMessage(contentMessage);
 
         if (isLoading) {
             return (
@@ -143,26 +172,9 @@ export default class App extends React.Component {
             );
         }
         return (
-            <div className="app-container text-center" style={{ overflow: 'auto' }}>
-                <h1>{title}</h1>
-                <br />
-                <ButtonSecondary onClick={postMessageToLearn(message)}>
-                    {postMessageText}
-                </ButtonSecondary>
-                <br />
-                <h3>Page Number: {searchResults.pagination.offset + 1}</h3>
-                <h3>Items Per Page: {searchResults.pagination.count}</h3>
-                <h3>Total Items: {searchResults.pagination.total_count}</h3>
-                {
-                    searchResults.data.map(result => (<div key={result.id}>
-                        <img src={result.images.original.url} alt={result.title} />
-                    </div>))
-                }
+            <div className="app-container" style={{ overflow: 'auto' }}>
+                {this.getSearchPage()}
             </div>
         );
     }
 }
-
-App.propTypes = {
-    title: PropTypes.string.isRequired,
-};

@@ -23,12 +23,14 @@
         "ariaNextPage": "Next page"
     },
     "results": {
-        "previewText": "Preview on site"
+        "previewText": "Preview on Giphy",
+        "score": "Score: {score}",
+        "trendingDate": "Trending: {date}"
     },
     "search": {
         "noResults": "No results found.",
-        "placeholderSearchText": "Content Search",
-        "resultOrderMessage": "Order of results is determined by the content provider",
+        "placeholderSearchText": "Search Giphy",
+        "resultOrderMessage": "Order of results is determined by the Giphy",
         "searchBoxAriaLabel": "Search Input",
         "sortFilterGroupsLabel": "Filter results",
         "title": "Giphy Search",

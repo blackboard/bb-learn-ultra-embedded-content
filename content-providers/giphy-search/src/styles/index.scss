@@ -34,3 +34,10 @@ body {
     padding: 1rem 1.25rem;
   }
 }
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
