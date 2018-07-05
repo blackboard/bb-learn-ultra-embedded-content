@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "İptal",
+        "insert": "Ekle",
+        "return": "Sonuçlara Dön",
+        "save": "Kaydet",
+        "search": "Ara",
+        "select": "Seç"
+    },
+    "edit": {
+        "altTextLabel": "Alternatif Metin",
+        "displayTypeLabel": "İçeriği Görüntüle",
+        "displayTypeOptions": {
+            "displayAsLink": "İçerik bir harici web sitesi bağlantısı olarak görüntülenir",
+            "displayInline": "Tarayıcı izin veriyorsa içerik, diğer içerikle birlikte görüntülenir. İzin vermiyorsa bağlantı olarak görüntülenir."
+        },
+        "title": "İçerik Ayarlarını Düzenle"
+    },
+    "pagination": {
+        "pagingInfo": "{totalItems} öğeden {firstItem}-{lastItem} arası görüntüleniyor",
+        "ariaPreviousPage": "Önceki sayfa",
+        "ariaNextPage": "Sonraki sayfa"
+    },
+    "results": {
+        "user": "Kullanıcı: {user}",
+        "previewText": "YouTube'da önizleyin: ",
+        "publishedAt": "Eklenen: {added}"
+    },
+    "search": {
+        "noResults": "Hiç sonuç bulunamadı.",
+        "resultOrderMessage": "Arama sonuçlarının sırasını YouTube belirler",
+        "placeholderSearchText": "Video ara",
+        "searchBoxAriaLabel": "Arama Girdisi",
+        "sortFilterGroupsLabel": "Sonuçları filtrele",
+        "options": {
+            "sortByDate": "Tarihe göre sırala",
+            "sortByRating": "Derecelendirmeye göre sırala",
+            "sortByRelevance": "Alaka düzeyine göre sırala",
+            "sortByTitle": "Başlığa göre sırala",
+            "sortByViewCount": "Görüntüleme sayısına göre sırala",
+            "updatedAnytime": "Herhangi bir zamanda güncellenmiş",
+            "updatedPastYear": "Son 1 yıl içinde güncellenmiş",
+            "updatedPast3Months": "Son 3 ay içinde güncellenmiş"
+        },
+        "title": "YouTube'da Ara"
+    },
+    "validations": {
+        "isRequired": "Bu, gerekli bir alandır"
+    }
+}

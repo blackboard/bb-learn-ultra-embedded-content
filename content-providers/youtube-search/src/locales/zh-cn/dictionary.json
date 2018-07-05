@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "取消",
+        "insert": "插入",
+        "return": "返回结果",
+        "save": "保存",
+        "search": "搜索",
+        "select": "选择"
+    },
+    "edit": {
+        "altTextLabel": "替换文本",
+        "displayTypeLabel": "显示内容",
+        "displayTypeOptions": {
+            "displayAsLink": "该内容显示为指向外部网站的链接。",
+            "displayInline": "如果浏览器允许，内容以内联方式显示。如果不允许，内容将显示为链接。"
+        },
+        "title": "编辑内容设置"
+    },
+    "pagination": {
+        "pagingInfo": "当前显示 {firstItem} 到 {lastItem} 个项目，共 {totalItems} 个",
+        "ariaPreviousPage": "上一页",
+        "ariaNextPage": "下一页"
+    },
+    "results": {
+        "user": "用户: {user}",
+        "previewText": "在 YouTube 上预览: ",
+        "publishedAt": "已添加: {added}"
+    },
+    "search": {
+        "noResults": "未找到结果。",
+        "resultOrderMessage": "YouTube 确定搜索结果顺序",
+        "placeholderSearchText": "搜索视频",
+        "searchBoxAriaLabel": "搜索输入",
+        "sortFilterGroupsLabel": "筛选结果",
+        "options": {
+            "sortByDate": "按日期排序",
+            "sortByRating": "按评定排序",
+            "sortByRelevance": "按相关性排序",
+            "sortByTitle": "按标题排序",
+            "sortByViewCount": "按查看次数排序",
+            "updatedAnytime": "随时更新",
+            "updatedPastYear": "去年更新",
+            "updatedPast3Months": "过去 3 个月更新"
+        },
+        "title": "搜索 YouTube"
+    },
+    "validations": {
+        "isRequired": "此为必填字段"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Annuler",
+        "insert": "Insérer",
+        "return": "Retour aux résultats",
+        "save": "Enregistrer",
+        "search": "Rechercher",
+        "select": "Sélectionner"
+    },
+    "edit": {
+        "altTextLabel": "Texte de remplacement",
+        "displayTypeLabel": "Afficher le contenu",
+        "displayTypeOptions": {
+            "displayAsLink": "Le contenu s'affiche sous la forme d'un lien renvoyant à un site Web externe.",
+            "displayInline": "Si le navigateur l'autorise, le contenu apparaît en ligne. Dans le cas contraire, il apparaît sous la forme d'un lien."
+        },
+        "title": "Modifier les paramètres du contenu"
+    },
+    "pagination": {
+        "pagingInfo": "Affichage des éléments {firstItem} à {lastItem} sur {totalItems}",
+        "ariaPreviousPage": "Page précédente",
+        "ariaNextPage": "Page suivante"
+    },
+    "results": {
+        "user": "Utilisateur : {user}",
+        "previewText": "Aperçu sur YouTube : ",
+        "publishedAt": "Ajouté : {added}"
+    },
+    "search": {
+        "noResults": "Aucun résultat trouvé.",
+        "resultOrderMessage": "YouTube détermine l'ordre des résultats de recherche",
+        "placeholderSearchText": "Rechercher une vidéo",
+        "searchBoxAriaLabel": "Saisie des critères de recherche",
+        "sortFilterGroupsLabel": "Filtrer les résultats",
+        "options": {
+            "sortByDate": "Trier par date",
+            "sortByRating": "Trier par notation",
+            "sortByRelevance": "Trier par pertinence",
+            "sortByTitle": "Trier par titre",
+            "sortByViewCount": "Trier par nombre de vues",
+            "updatedAnytime": "Mis à jour n'importe quand",
+            "updatedPastYear": "Mis à jour pendant l'année précédente",
+            "updatedPast3Months": "Mis à jour au cours des 3 derniers mois"
+        },
+        "title": "Rechercher sur YouTube"
+    },
+    "validations": {
+        "isRequired": "Ce champ est obligatoire."
+    }
+}

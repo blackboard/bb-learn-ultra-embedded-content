@@ -1,0 +1,64 @@
+{
+  "name": "getting-started",
+  "version": "0.0.16",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --env production",
+    "build:watch": "webpack --watch --env production",
+    "lint:fix": "eslint --ext .jsx,.js --fix ./",
+    "lint": "eslint --ext .jsx,.js ./",
+    "preinstall": "rm -f package-lock.json*",
+    "start": "npm run server:dev",
+    "server": "webpack-dev-server --env development",
+    "server:dev": "nodemon --watch webpack.config.js --exec \"npm run server\"",
+    "test": "npm run lint:fix && jest --no-cache",
+    "test:update": "jest -u",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^20.0.4",
+    "nodemon": "^1.14.11",
+    "react-test-renderer": "^16.0.0",
+    "svg-url-loader": "^2.3.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "jest": {
+    "globals": {
+      "window": {
+        "location": {
+          "origin": "https://www.example.com/"
+        }
+      }
+    },
+    "moduleNameMapper": {
+      "^.+\\.(css|scss|svg)$": "identity-obj-proxy"
+    },
+    "setupFiles": [],
+    "setupTestFrameworkScriptFile": "./test-setup.js",
+    "testURL": "https://www.example.com/",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}

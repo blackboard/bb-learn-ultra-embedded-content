@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Annulla",
+        "insert": "Inserisci",
+        "return": "Torna ai risultati",
+        "save": "Salva",
+        "search": "Ricerca",
+        "select": "Seleziona"
+    },
+    "edit": {
+        "altTextLabel": "Testo alternativo",
+        "displayTypeLabel": "Mostra contenuto",
+        "displayTypeOptions": {
+            "displayAsLink": "Il contenuto viene visualizzato come collegamento a un sito Web esterno",
+            "displayInline": "Il contenuto viene visualizzato in linea se il browser lo consente. In caso contrario, il contenuto viene visualizzato come un collegamento."
+        },
+        "title": "Modifica impostazioni contenuto"
+    },
+    "pagination": {
+        "pagingInfo": "Mostra da {firstItem} a {lastItem} di {totalItems} elementi",
+        "ariaPreviousPage": "Pagina precedente",
+        "ariaNextPage": "Pagina successiva"
+    },
+    "results": {
+        "user": "Utente: {user}",
+        "previewText": "Anteprima su YouTube: ",
+        "publishedAt": "Aggiunto: {added}"
+    },
+    "search": {
+        "noResults": "Nessun risultato trovato.",
+        "resultOrderMessage": "YouTube determina l'ordine dei risultati di ricerca",
+        "placeholderSearchText": "Cerca un video",
+        "searchBoxAriaLabel": "Input di ricerca",
+        "sortFilterGroupsLabel": "Filtra risultati",
+        "options": {
+            "sortByDate": "Ordina per data",
+            "sortByRating": "Ordina per valutazione",
+            "sortByRelevance": "Ordina per rilevanza",
+            "sortByTitle": "Ordina per titolo",
+            "sortByViewCount": "Ordina per numero visualizzazioni",
+            "updatedAnytime": "Aggiornato in qualsiasi momento",
+            "updatedPastYear": "Aggiornato lo scorso anno",
+            "updatedPast3Months": "Aggiornato negli ultimi 3 mesi"
+        },
+        "title": "Cerca in YouTube"
+    },
+    "validations": {
+        "isRequired": "Questo campo è obbligatorio"
+    }
+}

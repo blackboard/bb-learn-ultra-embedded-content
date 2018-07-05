@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Canslo",
+        "insert": "Mewnosod",
+        "return": "Yn ôl i'r Canlyniadau",
+        "save": "Cadw",
+        "search": "Chwilio",
+        "select": "Dewis"
+    },
+    "edit": {
+        "altTextLabel": "Testun amgen",
+        "displayTypeLabel": "Arddangos Cynnwys",
+        "displayTypeOptions": {
+            "displayAsLink": "Mae'r cynnwys yn arddangos fel dolen i wefan allanol",
+            "displayInline": "Mae'r ffeil yn arddangos yn fewnol os mae'r porwr yn caniatáu. Os nad yw'n caniatáu mae'r ffeil yn arddangos fel dolen."
+        },
+        "title": "Golygu'r gosodiadau cynnwys"
+    },
+    "pagination": {
+        "pagingInfo": "Yn dangos {firstItem} i {lastItem} o {totalItems} eitem",
+        "ariaPreviousPage": "Tudalen flaenorol",
+        "ariaNextPage": "Tudalen nesaf"
+    },
+    "results": {
+        "user": "Defnyddiwr: {user}",
+        "previewText": "Rhagolwg ar YouTube: ",
+        "publishedAt": "Ychwanegwyd: {added}"
+    },
+    "search": {
+        "noResults": "Ni chafwyd hyd i unrhyw ganlyniad.",
+        "resultOrderMessage": "YouTube sy'n pennu trefn canlyniadau'r chwilio",
+        "placeholderSearchText": "Chwilio am fideo",
+        "searchBoxAriaLabel": "Chwilio yn y Mewnbwn",
+        "sortFilterGroupsLabel": "Hidlo'r canlyniadau",
+        "options": {
+            "sortByDate": "Trefnu yn ôl dyddiad",
+            "sortByRating": "Trefnu yn ôl sgôr",
+            "sortByRelevance": "Trefnu yn ôl perthnasedd",
+            "sortByTitle": "Trefnu yn ôl teitl",
+            "sortByViewCount": "Trefnu yn ôl y nifer sydd wedi gwylio",
+            "updatedAnytime": "Diweddarwyd unrhyw bryd",
+            "updatedPastYear": "Diweddarwyd yn y flwyddyn ddiwethaf",
+            "updatedPast3Months": "Diweddarwyd yn y 3 mis diwethaf"
+        },
+        "title": "Chwilio YouTube"
+    },
+    "validations": {
+        "isRequired": "Mae hwn yn faes gofynnol"
+    }
+}

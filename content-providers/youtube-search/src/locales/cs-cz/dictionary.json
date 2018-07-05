@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Zrušit",
+        "insert": "Vložit",
+        "return": "Zpět na výsledky",
+        "save": "Uložit",
+        "search": "Hledat",
+        "select": "Vybrat"
+    },
+    "edit": {
+        "altTextLabel": "Alternativní text",
+        "displayTypeLabel": "Zobrazit obsah",
+        "displayTypeOptions": {
+            "displayAsLink": "Obsah se zobrazí jako odkaz na externí webové stránky",
+            "displayInline": "Pokud to umožňuje prohlížeč, zobrazí se obsah jako vložený. V opačném případě se zobrazí jako odkaz."
+        },
+        "title": "Upravit nastavení obsahu"
+    },
+    "pagination": {
+        "pagingInfo": "Zobrazují se položky {firstItem} až {lastItem} z celkem {totalItems}",
+        "ariaPreviousPage": "Předchozí stránka",
+        "ariaNextPage": "Další stránka"
+    },
+    "results": {
+        "user": "Uživatel: {user}",
+        "previewText": "Náhled na YouTube: ",
+        "publishedAt": "Přidáno: {added}"
+    },
+    "search": {
+        "noResults": "Nebyly nalezeny žádné výsledky.",
+        "resultOrderMessage": "Pořadí výsledků vyhledávání určuje YouTube",
+        "placeholderSearchText": "Hledat video",
+        "searchBoxAriaLabel": "Vstup pro vyhledávání",
+        "sortFilterGroupsLabel": "Filtrovat výsledky",
+        "options": {
+            "sortByDate": "Řadit podle data",
+            "sortByRating": "Řadit podle hodnocení",
+            "sortByRelevance": "Řadit podle relevance",
+            "sortByTitle": "Řadit podle názvu",
+            "sortByViewCount": "Řadit podle počtu zhlédnutí",
+            "updatedAnytime": "Aktualizováno kdykoli",
+            "updatedPastYear": "Aktualizováno během posledního roku",
+            "updatedPast3Months": "Aktualizováno během posledních tří měsíců"
+        },
+        "title": "Prohledat YouTube"
+    },
+    "validations": {
+        "isRequired": "Toto je povinné pole"
+    }
+}

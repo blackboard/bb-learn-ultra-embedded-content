@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Отмена",
+        "insert": "Вставить",
+        "return": "Вернуться к результатам",
+        "save": "Сохранить",
+        "search": "Поиск",
+        "select": "Выбрать"
+    },
+    "edit": {
+        "altTextLabel": "Альтернативный текст",
+        "displayTypeLabel": "Отобразить содержимое",
+        "displayTypeOptions": {
+            "displayAsLink": "Содержимое отображается в виде ссылки на внешний веб-сайт",
+            "displayInline": "Файл отображается как встроенный объект, если браузер поддерживает эту функцию. В противном случае отображается как ссылка."
+        },
+        "title": "Изменить настройки содержимого"
+    },
+    "pagination": {
+        "pagingInfo": "Отображение элементов с {firstItem} по {lastItem} из общего количества {totalItems}",
+        "ariaPreviousPage": "Предыдущая страница",
+        "ariaNextPage": "Следующая страница"
+    },
+    "results": {
+        "user": "Пользователь: {user}",
+        "previewText": "Предварительный просмотр на YouTube: ",
+        "publishedAt": "Добавлено: {added}"
+    },
+    "search": {
+        "noResults": "Результаты не найдены.",
+        "resultOrderMessage": "YouTube определяет порядок результатов поиска",
+        "placeholderSearchText": "Поиск видео",
+        "searchBoxAriaLabel": "Входные данные поиска",
+        "sortFilterGroupsLabel": "Применить фильтры к результатам",
+        "options": {
+            "sortByDate": "Сортировать по дате",
+            "sortByRating": "Сортировать по рейтингу",
+            "sortByRelevance": "Сортировать по релевантности",
+            "sortByTitle": "Сортировать по названию",
+            "sortByViewCount": "Сортировать по числу просмотров",
+            "updatedAnytime": "Обновлено в любое время",
+            "updatedPastYear": "Обновлялось в течение последнего года",
+            "updatedPast3Months": "Обновлялось в течение последних 3 месяцев"
+        },
+        "title": "Поиск в YouTube"
+    },
+    "validations": {
+        "isRequired": "Это обязательное поле"
+    }
+}

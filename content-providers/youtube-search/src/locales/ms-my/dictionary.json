@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Batal",
+        "insert": "Masukkan",
+        "return": "Kembali kepada Keputusan",
+        "save": "Simpan",
+        "search": "Cari",
+        "select": "Pilih"
+    },
+    "edit": {
+        "altTextLabel": "Teks Alternatif",
+        "displayTypeLabel": "Papar Kandungan",
+        "displayTypeOptions": {
+            "displayAsLink": "Kandungan dipaparkan sebagai pautan kepada laman web luaran",
+            "displayInline": "Kandungan dipaparkan sebaris jika pelayar membenarkannya. Jika tidak dibenarkan, kandungan dipaparkan sebagai pautan."
+        },
+        "title": "Edit Tetapan Kandungan"
+    },
+    "pagination": {
+        "pagingInfo": "Memaparkan {firstItem} hingga {lastItem} daripada {totalItems} item",
+        "ariaPreviousPage": "Halaman sebelumnya",
+        "ariaNextPage": "Halaman seterusnya"
+    },
+    "results": {
+        "user": "Pengguna: {user}",
+        "previewText": "Pratonton di YouTube: ",
+        "publishedAt": "Ditambah: {added}"
+    },
+    "search": {
+        "noResults": "Tiada keputusan yang ditemui.",
+        "resultOrderMessage": "YouTube menentukan susunan keputusan carian",
+        "placeholderSearchText": "Cari video",
+        "searchBoxAriaLabel": "Input Carian",
+        "sortFilterGroupsLabel": "Tapis keputusan",
+        "options": {
+            "sortByDate": "Isih ikut tarikh",
+            "sortByRating": "Isih ikut penarafan",
+            "sortByRelevance": "Isih ikut kaitan",
+            "sortByTitle": "Isih ikut tajuk",
+            "sortByViewCount": "Isih ikut bilangan paparan",
+            "updatedAnytime": "Dikemas kini pada bila-bila masa",
+            "updatedPastYear": "Dikemas kini pada tahun lepas",
+            "updatedPast3Months": "Dikemas kini dalam masa 3 bulan lepas"
+        },
+        "title": "Cari di YouTube"
+    },
+    "validations": {
+        "isRequired": "Medan ini diperlukan"
+    }
+}

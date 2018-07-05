@@ -1,0 +1,15 @@
+{
+    "plugins": ["array-includes"],
+    "presets": [
+        "es2015",
+        "react",
+        "stage-2"
+    ],
+    "env": {
+        "start": {
+            "presets": [
+                "react-hmre"
+            ]
+        }
+    }
+}

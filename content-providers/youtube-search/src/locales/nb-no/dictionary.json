@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Avbryt",
+        "insert": "Sett inn",
+        "return": "Tilbake til resultatene",
+        "save": "Lagre",
+        "search": "Søk",
+        "select": "Velg"
+    },
+    "edit": {
+        "altTextLabel": "Alternativ tekst",
+        "displayTypeLabel": "Vis innholdet",
+        "displayTypeOptions": {
+            "displayAsLink": "Innholdet vises som en lenke til et eksternt nettsted",
+            "displayInline": "Innholdet vises sammen med annet innhold hvis nettleseren støtter dette. Ellers vises det som en lenke."
+        },
+        "title": "Rediger innholdsinnstillingene"
+    },
+    "pagination": {
+        "pagingInfo": "Viser {firstItem}–{lastItem} av {totalItems} elementer",
+        "ariaPreviousPage": "Forrige side",
+        "ariaNextPage": "Neste side"
+    },
+    "results": {
+        "user": "Bruker: {user}",
+        "previewText": "Forhåndsvisning på YouTube: ",
+        "publishedAt": "Lagt til: {added}"
+    },
+    "search": {
+        "noResults": "Fant ingen resultater.",
+        "resultOrderMessage": "Det er YouTube som avgjør rekkefølgen på søkeresultatene",
+        "placeholderSearchText": "Søk etter en video",
+        "searchBoxAriaLabel": "Søketekst",
+        "sortFilterGroupsLabel": "Filtrer resultatene",
+        "options": {
+            "sortByDate": "Sorter etter dato",
+            "sortByRating": "Sorter etter vurdering",
+            "sortByRelevance": "Sorter etter relevans",
+            "sortByTitle": "Sorter etter tittel",
+            "sortByViewCount": "Sorter etter antall visninger",
+            "updatedAnytime": "Oppdatert når som helst",
+            "updatedPastYear": "Oppdatert i løpet av det siste året",
+            "updatedPast3Months": "Oppdatert i løpet av de siste tre månedene"
+        },
+        "title": "Søk på YouTube"
+    },
+    "validations": {
+        "isRequired": "Dette er et obligatorisk felt"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Abbrechen",
+        "insert": "Einfügen",
+        "return": "Zurück zu Ergebnissen",
+        "save": "Speichern",
+        "search": "Suchen",
+        "select": "Auswählen"
+    },
+    "edit": {
+        "altTextLabel": "Alternativtext",
+        "displayTypeLabel": "Inhalt anzeigen",
+        "displayTypeOptions": {
+            "displayAsLink": "Der Inhalt wird in Form eines Links zu einer externen Website angezeigt",
+            "displayInline": "Die Datei wird je nach Browser inline angezeigt. Unterstützt der Browser dies nicht, wird die Datei als Anhang angezeigt."
+        },
+        "title": "Inhaltseinstellungen bearbeiten"
+    },
+    "pagination": {
+        "pagingInfo": "{firstItem} bis {lastItem} von {totalItems} Elementen werden angezeigt",
+        "ariaPreviousPage": "Vorherige Seite",
+        "ariaNextPage": "Nächste Seite"
+    },
+    "results": {
+        "user": "Benutzer: {user}",
+        "previewText": "Vorschau auf YouTube: ",
+        "publishedAt": "Hinzugefügt: {added}"
+    },
+    "search": {
+        "noResults": "Keine Ergebnisse gefunden.",
+        "resultOrderMessage": "Die Reihenfolge der Suchergebnisse wird von YouTube festgelegt.",
+        "placeholderSearchText": "Nach einem Video suchen",
+        "searchBoxAriaLabel": "Sucheingabge",
+        "sortFilterGroupsLabel": "Ergebnisse filtern",
+        "options": {
+            "sortByDate": "Nach Datum sortieren",
+            "sortByRating": "Nach Bewertung sortieren",
+            "sortByRelevance": "Nach Relevanz sortieren",
+            "sortByTitle": "Nach Titel sortieren",
+            "sortByViewCount": "Nach Anzahl der Views sortieren",
+            "updatedAnytime": "Zu einem beliebigen Zeitpunkt aktualisiert",
+            "updatedPastYear": "Im vergangenen Jahr aktualisiert",
+            "updatedPast3Months": "In den vergangenen 3 Monaten aktualisiert"
+        },
+        "title": "YouTube durchsuchen"
+    },
+    "validations": {
+        "isRequired": "Dies ist ein Pflichtfeld"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "إلغاء الأمر",
+        "insert": "إدراج",
+        "return": "الرجوع إلى النتائج",
+        "save": "حفظ",
+        "search": "بحث",
+        "select": "تحديد"
+    },
+    "edit": {
+        "altTextLabel": "نص بديل",
+        "displayTypeLabel": "عرض المحتوى",
+        "displayTypeOptions": {
+            "displayAsLink": "يتم عرض المحتوى كرابط لموقع ويب خارجي",
+            "displayInline": "يتم عرض الملف مضمنًا إذا سمح المستعرض بذلك. وإذا لم يكن مسموحًا بذلك، يتم عرض الملف كرابط."
+        },
+        "title": "تحرير إعدادات المحتوى"
+    },
+    "pagination": {
+        "pagingInfo": "يتم عرض {firstItem} إلى {lastItem} من {totalItems} عناصر",
+        "ariaPreviousPage": "الصفحة السابقة",
+        "ariaNextPage": "الصفحة التالية"
+    },
+    "results": {
+        "user": "المستخدم: {user}",
+        "previewText": "معاينة على YouTube: ",
+        "publishedAt": "تمت إضافة: {added}"
+    },
+    "search": {
+        "noResults": "لم يتم العثور على النتائج.",
+        "resultOrderMessage": "يُحدد YouTube ترتيب نتائج البحث",
+        "placeholderSearchText": "البحث عن الفيديو",
+        "searchBoxAriaLabel": "إدخال البحث",
+        "sortFilterGroupsLabel": "نتائج عامل التصفية",
+        "options": {
+            "sortByDate": "الفرز حسب التاريخ",
+            "sortByRating": "الفرز حسب التصنيف",
+            "sortByRelevance": "الفرز حسب الصلة",
+            "sortByTitle": "الفرز حسب العنوان",
+            "sortByViewCount": "الفرز حسب عدد مرات العرض",
+            "updatedAnytime": "تم التحديث في أي وقت",
+            "updatedPastYear": "تم التحديث في العام السابق",
+            "updatedPast3Months": "تم التحديث في الثلاثة أشهر السابقة"
+        },
+        "title": "البحث في YouTube"
+    },
+    "validations": {
+        "isRequired": "هذا الحقل مطلوب"
+    }
+}

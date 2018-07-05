@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "取消",
+        "insert": "插入",
+        "return": "回到結果",
+        "save": "儲存",
+        "search": "搜尋",
+        "select": "選取"
+    },
+    "edit": {
+        "altTextLabel": "替代文字",
+        "displayTypeLabel": "顯示內容",
+        "displayTypeOptions": {
+            "displayAsLink": "內容顯示為外部網站連結",
+            "displayInline": "如果瀏覽器允許的話，內容會以內嵌方式顯示。如果不允許的話，檔案會顯示為連結。"
+        },
+        "title": "編輯內容設定"
+    },
+    "pagination": {
+        "pagingInfo": "顯示 {firstItem} 到 {lastItem} 個項目，共 {totalItems} 個項目",
+        "ariaPreviousPage": "上一頁",
+        "ariaNextPage": "下一頁"
+    },
+    "results": {
+        "user": "使用者: {user}",
+        "previewText": "在 YouTube 上預覽: ",
+        "publishedAt": "已新增: {added}"
+    },
+    "search": {
+        "noResults": "找不到任何結果。",
+        "resultOrderMessage": "YouTube 決定搜尋結果的順序",
+        "placeholderSearchText": "搜尋視訊",
+        "searchBoxAriaLabel": "搜尋輸入",
+        "sortFilterGroupsLabel": "篩選結果",
+        "options": {
+            "sortByDate": "依日期排序",
+            "sortByRating": "依評價排序",
+            "sortByRelevance": "依相關性排序",
+            "sortByTitle": "依標題排序",
+            "sortByViewCount": "依檢視計數排序",
+            "updatedAnytime": "隨時更新",
+            "updatedPastYear": "去年已更新",
+            "updatedPast3Months": "過去 3 個月已更新"
+        },
+        "title": "搜尋 YouTube"
+    },
+    "validations": {
+        "isRequired": "此為必填欄位"
+    }
+}

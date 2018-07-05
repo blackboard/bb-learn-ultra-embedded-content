@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Cancelar",
+        "insert": "Insertar",
+        "return": "Volver a los resultados",
+        "save": "Guardar",
+        "search": "Buscar",
+        "select": "Seleccionar"
+    },
+    "edit": {
+        "altTextLabel": "Texto alternativo",
+        "displayTypeLabel": "Mostrar contenido",
+        "displayTypeOptions": {
+            "displayAsLink": "El contenido se muestra como un enlace a un sitio Web externo",
+            "displayInline": "El contenido se muestra en línea si el explorador lo permite. Si no lo permite, el contenido se muestra como un enlace."
+        },
+        "title": "Editar los ajustes del contenido"
+    },
+    "pagination": {
+        "pagingInfo": "Se muestra {firstItem} a {lastItem} de {totalItems} elementos",
+        "ariaPreviousPage": "Página anterior",
+        "ariaNextPage": "Página siguiente"
+    },
+    "results": {
+        "user": "Usuario: {user}",
+        "previewText": "Vista preliminar en YouTube: ",
+        "publishedAt": "Agregado: {added}"
+    },
+    "search": {
+        "noResults": "No se encontraron resultados.",
+        "resultOrderMessage": "YouTube determina el orden de los resultados de búsqueda",
+        "placeholderSearchText": "Buscar un video",
+        "searchBoxAriaLabel": "Entrada de búsqueda",
+        "sortFilterGroupsLabel": "Filtrar resultados",
+        "options": {
+            "sortByDate": "Ordenar por fecha",
+            "sortByRating": "Ordenar por calificación",
+            "sortByRelevance": "Ordenar por relevancia",
+            "sortByTitle": "Ordenar por título",
+            "sortByViewCount": "Ordenar por recuento de vistas",
+            "updatedAnytime": "Se actualiza en cualquier momento",
+            "updatedPastYear": "Se actualizó el año pasado",
+            "updatedPast3Months": "Se actualizó en los últimos 3 meses"
+        },
+        "title": "Buscar en YouTube"
+    },
+    "validations": {
+        "isRequired": "Este es un campo obligatorio."
+    }
+}

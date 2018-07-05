@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Annuleren",
+        "insert": "Invoegen",
+        "return": "Terug naar resultaten",
+        "save": "Opslaan",
+        "search": "Zoeken",
+        "select": "Selecteren"
+    },
+    "edit": {
+        "altTextLabel": "Alternatieve tekst",
+        "displayTypeLabel": "Inhoud weergeven",
+        "displayTypeOptions": {
+            "displayAsLink": "De inhoud wordt weergegeven als een koppeling naar een externe website",
+            "displayInline": "De inhoud wordt inline weergegeven als de browser dit toestaat. Als dit niet is toegestaan, wordt de inhoud als een koppeling weergegeven."
+        },
+        "title": "Inhoudsinstellingen bewerken"
+    },
+    "pagination": {
+        "pagingInfo": "{firstItem} tot {lastItem} van {totalItems} items worden weergegeven",
+        "ariaPreviousPage": "Vorige pagina",
+        "ariaNextPage": "Volgende pagina"
+    },
+    "results": {
+        "user": "Gebruiker: {user}",
+        "previewText": "Voorbeeld op YouTube: ",
+        "publishedAt": "Toegevoegd: {added}"
+    },
+    "search": {
+        "noResults": "Geen resultaten gevonden.",
+        "resultOrderMessage": "YouTube bepaalt de volgorde van de zoekresultaten",
+        "placeholderSearchText": "Zoeken naar een video",
+        "searchBoxAriaLabel": "Zoekinvoer",
+        "sortFilterGroupsLabel": "Resultaten filteren",
+        "options": {
+            "sortByDate": "Sorteren op datum",
+            "sortByRating": "Sorteren op beoordeling",
+            "sortByRelevance": "Sorteren op relevantie",
+            "sortByTitle": "Sorteren op titel",
+            "sortByViewCount": "Sorteren op aantal weergaven",
+            "updatedAnytime": "Bijgewerkt op een willekeurig moment",
+            "updatedPastYear": "Bijgewerkt in het afgelopen jaar",
+            "updatedPast3Months": "Bijgewerkt in de afgelopen 3 maanden"
+        },
+        "title": "Zoeken in YouTube"
+    },
+    "validations": {
+        "isRequired": "Dit is een vereist veld"
+    }
+}

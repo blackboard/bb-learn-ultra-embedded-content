@@ -1,0 +1,14 @@
+.idea
+.vscode
+node_modules
+**/node_modules/**
+build
+lib
+.eslintcache
+*.swp
+.DS_Store
+npm-debug.log
+coverage
+*.tgz
+package-lock.json
+package-lock.json*

@@ -1,0 +1,55 @@
+@import './search-edit';
+@import './search-result';
+
+html {
+  min-height: 20rem;
+  overflow-y: hidden; //Prevent the double-scrollbar effect when there are many search results
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #FFFFFF;
+  color: #262626;
+
+  button {
+    height: 2.375rem;
+  }
+
+  #app {
+    height: 100%;
+    font-size: 14px;
+
+    h1 {
+      font-weight: 400;
+      font-size: 24px;
+      margin: 0;
+      padding: 1rem 1.25rem;
+    }
+
+    a:not(.option-link) {
+      color: $bb-link-blue-a;
+      text-decoration: none;
+
+      &:hover {
+        color: $bb-link-hover;
+        text-decoration: underline;
+      }
+    }
+
+    .app-container {
+      height: 100%;
+    }
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

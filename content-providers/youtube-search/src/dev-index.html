@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="https://mylearn.int.bbpd.io/react/styles.css">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://mylearn.int.bbpd.io/react/bundle.js"></script>
+    <script type="text/javascript">
+        fetch('/learn/api/v1/utilities/xsrfToken', {
+            method: 'GET',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+            },
+        }).then(result => result.json()).then((result) => {
+            if (result.status === 401) {
+                // Redirect to login
+                window.location = '/?new_loc=%2Freact';
+            }
+
+            if (result && result.xsrfToken) {
+                window.postMessage({
+                    messageType: 'api_base_path',
+                    apiBasePath: 'https://mylearn.int.bbpd.io/learn/api',
+                    xsrfToken: result.xsrfToken,
+                    locale: 'en',
+                }, this.location.origin)
+
+            } else {
+                console.error('Failed to retrieve XSRF token', result);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

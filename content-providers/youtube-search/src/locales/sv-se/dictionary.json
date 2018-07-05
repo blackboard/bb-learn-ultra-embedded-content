@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Avbryt",
+        "insert": "Infoga",
+        "return": "Tillbaka till resultat",
+        "save": "Spara",
+        "search": "Sök",
+        "select": "Välj"
+    },
+    "edit": {
+        "altTextLabel": "Alternativ text",
+        "displayTypeLabel": "Visa innehåll",
+        "displayTypeOptions": {
+            "displayAsLink": "Innehållet visas som en länk till en extern webbsida",
+            "displayInline": "Filen visas internt om webbläsaren tillåter det. Om inte, visas den som en bilaga."
+        },
+        "title": "Inställningar för innehåll"
+    },
+    "pagination": {
+        "pagingInfo": "Visar {firstItem} till {lastItem} av {totalItems} objekt",
+        "ariaPreviousPage": "Föregående sida",
+        "ariaNextPage": "Nästa sida"
+    },
+    "results": {
+        "user": "Användare: {user}",
+        "previewText": "Förhandsgranska på YouTube: ",
+        "publishedAt": "Tillagd: {added}"
+    },
+    "search": {
+        "noResults": "Inga resultat hittades.",
+        "resultOrderMessage": "YouTube bestämmer ordningen för sökresultaten",
+        "placeholderSearchText": "Sök efter en video",
+        "searchBoxAriaLabel": "Sökinmatning",
+        "sortFilterGroupsLabel": "Filtrera resultat",
+        "options": {
+            "sortByDate": "Sortera efter datum",
+            "sortByRating": "Sortera efter betyg",
+            "sortByRelevance": "Sortera efter relevans",
+            "sortByTitle": "Sortera efter titel",
+            "sortByViewCount": "Sortera efter antal visningar",
+            "updatedAnytime": "Uppdaterad när som helst",
+            "updatedPastYear": "Uppdaterad under det senaste året",
+            "updatedPast3Months": "Uppdaterad under de senaste tre månaderna"
+        },
+        "title": "Sök på YouTube"
+    },
+    "validations": {
+        "isRequired": "Det här är ett obligatoriskt fält"
+    }
+}

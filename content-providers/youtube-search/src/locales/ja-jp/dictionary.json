@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "キャンセル",
+        "insert": "挿入",
+        "return": "結果に戻る",
+        "save": "保存",
+        "search": "検索",
+        "select": "選択"
+    },
+    "edit": {
+        "altTextLabel": "代替テキスト",
+        "displayTypeLabel": "コンテンツを表示",
+        "displayTypeOptions": {
+            "displayAsLink": "コンテンツは外部のウェブサイトへのリンクとして表示されます。",
+            "displayInline": "ブラウザで許可されている場合、コンテンツはインライン表示されます。許可されていない場合、コンテンツはリンクとして表示されます。"
+        },
+        "title": "コンテンツの設定を編集"
+    },
+    "pagination": {
+        "pagingInfo": "{firstItem} - {lastItem} の表示 (合計{totalItems}件)",
+        "ariaPreviousPage": "前のページ",
+        "ariaNextPage": "次のページ"
+    },
+    "results": {
+        "user": "ユーザ : {user}",
+        "previewText": "YouTube でプレビュー : ",
+        "publishedAt": "追加 : {added}"
+    },
+    "search": {
+        "noResults": "結果が見つかりません。",
+        "resultOrderMessage": "YouTubeが検索結果の順序を決定します。",
+        "placeholderSearchText": "ビデオを検索",
+        "searchBoxAriaLabel": "検索を入力",
+        "sortFilterGroupsLabel": "結果をフィルタリング",
+        "options": {
+            "sortByDate": "日付でソート",
+            "sortByRating": "評価でソート",
+            "sortByRelevance": "関連性でソート",
+            "sortByTitle": "タイトルでソート",
+            "sortByViewCount": "表示回数でソート",
+            "updatedAnytime": "常時更新",
+            "updatedPastYear": "過去1年の間に更新済み",
+            "updatedPast3Months": "過去3か月の間に更新済み"
+        },
+        "title": "YouTubeを検索"
+    },
+    "validations": {
+        "isRequired": "これは必須フィールドです"
+    }
+}

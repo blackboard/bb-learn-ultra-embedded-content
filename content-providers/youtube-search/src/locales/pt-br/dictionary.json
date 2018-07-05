@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "Cancelar",
+        "insert": "Inserir",
+        "return": "Voltar aos resultados",
+        "save": "Salvar",
+        "search": "Pesquisar",
+        "select": "Selecionar"
+    },
+    "edit": {
+        "altTextLabel": "Texto alternativo",
+        "displayTypeLabel": "Exibir conteúdo",
+        "displayTypeOptions": {
+            "displayAsLink": "O conteúdo é exibido como um link para um site externo",
+            "displayInline": "O conteúdo será exibido em linha se o navegador permitir. Se não permitir, o conteúdo será exibido como um link."
+        },
+        "title": "Editar configurações do conteúdo"
+    },
+    "pagination": {
+        "pagingInfo": "Exibindo {firstItem} a {lastItem} de {totalItems} itens",
+        "ariaPreviousPage": "Página anterior",
+        "ariaNextPage": "Próxima página"
+    },
+    "results": {
+        "user": "Usuário: {user}",
+        "previewText": "Pré-visualização no YouTube: ",
+        "publishedAt": "Adicionado: {added}"
+    },
+    "search": {
+        "noResults": "Nenhum resultado encontrado.",
+        "resultOrderMessage": "O YouTube determina a ordem dos resultados da busca",
+        "placeholderSearchText": "Buscar um vídeo",
+        "searchBoxAriaLabel": "Entrada de pesquisa",
+        "sortFilterGroupsLabel": "Filtrar resultados",
+        "options": {
+            "sortByDate": "Classificar por data",
+            "sortByRating": "Classificar por avaliação",
+            "sortByRelevance": "Classificar por relevância",
+            "sortByTitle": "Classificar por título",
+            "sortByViewCount": "Classificar por contagem de visualizações",
+            "updatedAnytime": "Atualizado em qualquer data",
+            "updatedPastYear": "Atualizado no ano passado",
+            "updatedPast3Months": "Atualizado nos últimos 3 meses"
+        },
+        "title": "Buscar no YouTube"
+    },
+    "validations": {
+        "isRequired": "Este é um campo obrigatório"
+    }
+}

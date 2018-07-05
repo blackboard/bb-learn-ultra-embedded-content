@@ -1,0 +1,50 @@
+{
+    "buttons": {
+        "cancel": "ยกเลิก",
+        "insert": "แทรก",
+        "return": "กลับไปที่ผลลัพธ์",
+        "save": "บันทึก",
+        "search": "ค้นหา",
+        "select": "เลือก"
+    },
+    "edit": {
+        "altTextLabel": "ข้อความทดแทน",
+        "displayTypeLabel": "แสดงเนื้อหา",
+        "displayTypeOptions": {
+            "displayAsLink": "เนื้อหาแสดงเป็นลิงก์ไปยังเว็บไซต์ภายนอก",
+            "displayInline": "เนื้อหาจะแสดงแบบอินไลน์หากเบราว์เซอร์อนุญาต หากไม่อนุญาต เนื้อหาจะแสดงเป็นลิงก์"
+        },
+        "title": "แก้ไขการตั้งค่าเนื้อหา"
+    },
+    "pagination": {
+        "pagingInfo": "กำลังแสดง {firstItem} ถึง {lastItem} จาก {totalItems} รายการ",
+        "ariaPreviousPage": "หน้าก่อน",
+        "ariaNextPage": "หน้าถัดไป"
+    },
+    "results": {
+        "user": "ผู้ใช้: {user}",
+        "previewText": "ตัวอย่างบน YouTube: ",
+        "publishedAt": "สิ่งที่เพิ่ม: {added}"
+    },
+    "search": {
+        "noResults": "ไม่พบผลลัพธ์",
+        "resultOrderMessage": "YouTube กำหนดลำดับของผลลัพธ์การค้นหา",
+        "placeholderSearchText": "ค้นหาวิดีโอ",
+        "searchBoxAriaLabel": "ป้อนการค้นหา",
+        "sortFilterGroupsLabel": "ผลลัพธ์ตัวกรอง",
+        "options": {
+            "sortByDate": "เรียงตามวันที่",
+            "sortByRating": "เรียงตามคะแนน",
+            "sortByRelevance": "เรียงตามความเกี่ยวข้อง",
+            "sortByTitle": "เรียงตามชื่อ",
+            "sortByViewCount": "เรียงตามจำนวนครั้งที่ดู",
+            "updatedAnytime": "อัปเดตเมื่อใดก็ได้",
+            "updatedPastYear": "อัปเดตในปีที่ผ่านมา",
+            "updatedPast3Months": "อัปเดตใน 3 เดือนที่ผ่านมา"
+        },
+        "title": "ค้นหา YouTube"
+    },
+    "validations": {
+        "isRequired": "นี่คือฟิลด์ที่จำเป็นต้องกรอก"
+    }
+}
