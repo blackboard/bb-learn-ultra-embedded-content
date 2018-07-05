@@ -1,4 +1,9 @@
 // NOTE: Tailwind is a helper css package for mobile-first, responsive design and common style formats
+@import './search-edit';
+
+// Stylesheet options (choose one or the other)
+@import './search-result';
+// @import './search-result-tiles';
 
 html {
   min-height: 20rem;

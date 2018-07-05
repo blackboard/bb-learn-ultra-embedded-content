@@ -1,0 +1,151 @@
+@import './variables.scss';
+@import '../../../../library/styles/variables';
+
+$commonInputSpacing: .625rem;
+$commonMargin: .625rem;
+
+.giphy-search-container,
+.giphy-edit-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+
+  h1 {
+    border-bottom: 1px solid $bb-divider-grey;
+  }
+
+  &.hidden {
+    display:none;
+  }
+
+  .main-content {
+    flex: 1;
+    padding-bottom: 5.5rem;
+
+    .third-party-search-container {
+      .search-fields-container {
+        padding-bottom: .3125rem;
+        position: sticky;
+        position: -webkit-sticky;
+        z-index: 100;
+        top: 0;
+        background: #ffffff;
+        margin: 0 0 $commonMargin 0;
+
+        .search-input-box,
+        .search-filters {
+          width: 100%;
+          display: inline-flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+
+          @media screen and (min-width: $modal-small-breakpoint) {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+          }
+
+          select {
+            margin-bottom: 0;
+          }
+        }
+
+        .search-input-box {
+          background: $bb-bg-grey;
+          padding-right: 1rem;
+          padding-left: 1rem;
+          button {
+            margin-top: 1.125rem;
+          }
+        }
+
+        .search-filters {
+          margin-bottom: $commonMargin / 2;
+          padding-top: 0.9375rem;
+
+          .filter-label {
+            font-weight: 600;
+            margin-bottom: $commonMargin;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          span {
+            margin-right: $commonInputSpacing;
+          }
+
+          > span:nth-child(2),
+          > span:nth-child(3) {
+            width: 14.5rem;
+            flex: 1;
+
+            @media screen and (min-width: $modal-small-breakpoint) {
+              flex: none;
+            }
+          }
+        }
+      }
+
+      .search-results-container {
+        .no-results {
+          text-align: center;
+        }
+
+        .pagination-controls {
+          margin-top: 1rem;
+        }
+      }
+
+      .initial-message {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        font-size: 0.75rem;
+        font-style: italic;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          color: $bb-middle-grey;
+
+          &:first-child,
+          &:last-child {
+            color: transparent;
+            line-height: .12rem;
+            max-width: 2.375rem;
+            width: calc((100% - 16em) / 2);
+            border-bottom: 1px solid $bb-divider-grey;
+          }
+
+          &:nth-child(2) {
+            padding: .625rem $commonMargin / 2;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-content {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    border-top: 0.0625rem solid #cdcdcd;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    background: $bb-bg-grey;
+    @media screen and (max-width: $modal-smallest-breakpoint) {
+      .anchor {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .right-button-group {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
