@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
+import EditItem from './edit-item';
 import SearchResult from './search-result';
 import { MESSAGE_TYPES, SORT_FILTER_CONFIG, WORKFLOW_STATES } from '../constants';
 import {
@@ -17,10 +18,12 @@ export default class App extends React.Component {
 
         this.state = {
             locale: 'en',
+            previouslyFocusedElement: null,
             searchResults: {
                 data: [],
                 pagination: {},
             },
+            selectedResponse: {},
             workflow: WORKFLOW_STATES.loading,
         };
 
@@ -31,12 +34,15 @@ export default class App extends React.Component {
         this.translate = (key, params) => translator('en', key, params);
 
         // Method binding
+        this.focus = this.focus.bind(this);
         this.getGiphyMashupConfig = this.getGiphyMashupConfig.bind(this);
         this.getSearchPage = this.getSearchPage.bind(this);
         this.onContentSelect = this.onContentSelect.bind(this);
         this.onDismiss = this.onDismiss.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
         this.postMessage = this.postMessage.bind(this);
         this.receiveMessage = this.receiveMessage.bind(this);
+        this.returnToSearch = this.returnToSearch.bind(this);
         this.setCurrentLocale = this.setCurrentLocale.bind(this);
     }
 
@@ -62,6 +68,14 @@ export default class App extends React.Component {
         window.removeEventListener('message', this.receiveMessage);
     }
 
+    focus() {
+        if (this.state.previouslyFocusedElement) {
+            this.state.previouslyFocusedElement.focus();
+        } else {
+            this.title.focus();
+        }
+    }
+
     getGiphyMashupConfig(config) {
         axios({
             method: 'get',
@@ -74,7 +88,7 @@ export default class App extends React.Component {
             this.setState({
                 locale: response.data.options.defaultLanguage,
                 workflow: WORKFLOW_STATES.searching,
-            });
+            }, this.focus);
         }).catch(() => {
             // Let's mock a response from the Learn backend
             this.GiphyService.setApiKey('keSYPWldgPh4xaQULuKATCjkEFIV0qRT');
@@ -82,25 +96,35 @@ export default class App extends React.Component {
                 locale: 'en',
                 workflow: WORKFLOW_STATES.searching,
             });
-        });
+        }, this.focus);
     }
 
-    onContentSelect(selection) {
-        const message = {
-            dataContent: {
-                alt: selection.title,
-                src: selection.images.original.url,
-            },
-            dataType: 'image',
-            messageType: MESSAGE_TYPES.outgoing.contentReady,
-        };
-        this.postMessage(message);
+    onContentSelect(response) {
+        this.setState({
+            previouslyFocusedElement: document.activeElement,
+            selectedResponse: response,
+            workflow: WORKFLOW_STATES.editing,
+        });
     }
 
     onDismiss() {
         this.postMessage({
             messageType: MESSAGE_TYPES.outgoing.canceled,
         });
+    }
+
+    onSubmit(displayOptions) {
+        const dataType = displayOptions.displayType === 'displayInline' ? 'image' : 'link';
+        const response = this.state.selectedResponse;
+        const message = {
+            dataContent: {
+                alt: displayOptions.altText,
+                src: response.images.original.url,
+            },
+            dataType,
+            messageType: MESSAGE_TYPES.outgoing.contentReady,
+        };
+        this.postMessage(message);
     }
 
     postMessage(message) {
@@ -125,10 +149,34 @@ export default class App extends React.Component {
         }
     }
 
+    returnToSearch() {
+        this.setState({
+            workflow: WORKFLOW_STATES.searching,
+        }, this.focus);
+    }
+
     setCurrentLocale(locale) {
         this.setState({ locale });
         moment.locale(locale);
         this.GiphyService.setRelevanceLanguage(locale);
+    }
+
+    getEditPage() {
+        const { selectedResponse, workflow } = this.state;
+        const isEditing = workflow === WORKFLOW_STATES.editing;
+
+        if (isEditing) {
+            return (
+                <EditItem
+                    goBack={this.returnToSearch}
+                    onCancel={this.onDismiss}
+                    onSubmit={this.onSubmit}
+                    previewAttrs={selectedResponse}
+                    translate={this.translate}
+                />
+            );
+        }
+        return null;
     }
 
     getSearchPage() {
@@ -173,6 +221,7 @@ export default class App extends React.Component {
         }
         return (
             <div className="app-container" style={{ overflow: 'auto' }}>
+                {this.getEditPage()}
                 {this.getSearchPage()}
             </div>
         );
