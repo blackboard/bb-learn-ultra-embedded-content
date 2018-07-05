@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import { MESSAGE_TYPES, EMBED_URL_PREFIX, WORKFLOW_STATES } from '../constants';
 import {
@@ -6,6 +8,7 @@ import {
     Spinner,
 } from '../../../../library/react';
 import translator from '../services/translator';
+import GiphyService from '../services/giphy-service';
 
 export default class App extends React.Component {
     constructor() {
@@ -13,15 +16,20 @@ export default class App extends React.Component {
 
         this.state = {
             locale: 'en',
+            searchResults: {
+                data: [],
+                pagination: {},
+            },
             workflow: WORKFLOW_STATES.loading,
         };
 
         // Helper methods
+        this.GiphyService = new GiphyService();
         this.origin = document.referrer ? new URL(document.referrer).origin : document.origin;
         this.translate = (key, params) => translator('en', key, params);
 
         // Method binding
-        this.getMashupConfig = this.getMashupConfig.bind(this);
+        this.getGiphyMashupConfig = this.getGiphyMashupConfig.bind(this);
         this.postMessage = this.postMessage.bind(this);
         this.receiveMessage = this.receiveMessage.bind(this);
         this.setCurrentLocale = this.setCurrentLocale.bind(this);
@@ -49,11 +57,38 @@ export default class App extends React.Component {
         window.removeEventListener('message', this.receiveMessage);
     }
 
-    getMashupConfig(config) {
-        console.log('Mashup config received: ', config); // eslint-disable-line no-console
-        // NOTE: Use the mashup config to set up the API for search, localization, data modeling, etc.
-        this.setState({
-            workflow: WORKFLOW_STATES.editing,
+    getGiphyMashupConfig(config) {
+        axios({
+            method: 'get',
+            url: `${config.apiBasePath}/v1/mashups/giphy`,
+            headers: {
+                'X-Blackboard-XSRF': config.xsrfToken,
+            },
+        }).then((response) => {
+            this.GiphyService.setApiKey(response.data.options.apiKey);
+            this.setState({
+                locale: response.data.options.defaultLanguage,
+                workflow: WORKFLOW_STATES.searching,
+            });
+        }).catch(() => {
+            // Let's mock a response from the Learn backend
+            this.GiphyService.setApiKey('keSYPWldgPh4xaQULuKATCjkEFIV0qRT');
+            this.setState({
+                locale: 'en',
+                workflow: WORKFLOW_STATES.searching,
+            });
+            this.GiphyService.search({
+                searchText: 'school',
+                itemsPerPage: 10,
+                pageNumber: 1,
+            }).then((response) => {
+                console.log('Giphy: ', response); // eslint-disable-line no-console
+                this.setState({
+                    searchResults: response.data,
+                });
+            }).catch((responseError) => {
+                console.log(responseError); // eslint-disable-line no-console
+            });
         });
     }
 
@@ -75,16 +110,19 @@ export default class App extends React.Component {
         }
 
         if (event.data.messageType === MESSAGE_TYPES.incoming.initContent) {
-            this.getMashupConfig(event.data.config);
+            this.getGiphyMashupConfig(event.data.config);
         }
     }
 
     setCurrentLocale(locale) {
         this.setState({ locale });
+        moment.locale(locale);
+        this.GiphyService.setRelevanceLanguage(locale);
     }
 
     render() {
         const { title } = this.props;
+        const { searchResults } = this.state;
         const isLoading = this.state.workflow === WORKFLOW_STATES.loading;
         const postMessageText = this.translate('buttons.postMessage');
         // Let's mock a message that we will send to Bb Learn when our content is created/selected
@@ -105,12 +143,21 @@ export default class App extends React.Component {
             );
         }
         return (
-            <div className="app-container text-center">
+            <div className="app-container text-center" style={{ overflow: 'auto' }}>
                 <h1>{title}</h1>
                 <br />
                 <ButtonSecondary onClick={postMessageToLearn(message)}>
                     {postMessageText}
                 </ButtonSecondary>
+                <br />
+                <h3>Page Number: {searchResults.pagination.offset + 1}</h3>
+                <h3>Items Per Page: {searchResults.pagination.count}</h3>
+                <h3>Total Items: {searchResults.pagination.total_count}</h3>
+                {
+                    searchResults.data.map(result => (<div key={result.id}>
+                        <img src={result.images.original.url} alt={result.title} />
+                    </div>))
+                }
             </div>
         );
     }
