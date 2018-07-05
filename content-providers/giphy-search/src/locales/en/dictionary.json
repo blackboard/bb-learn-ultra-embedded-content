@@ -1,0 +1,49 @@
+{
+    "buttons": {
+        "cancel": "Cancel",
+        "insert": "Insert",
+        "postMessage": "Post Message w/ content to Bb Learn",
+        "return": "Back to Results",
+        "save": "Save",
+        "search": "Search",
+        "select": "Select"
+    },
+    "edit": {
+        "altTextLabel": "Alternative Text",
+        "displayTypeLabel": "Display Content",
+        "displayTypeOptions": {
+            "displayAsLink": "The content displays as a link to an external website",
+            "displayInline": "The content displays inline if the browser allows. If not allowed, the content displays as a link."
+        },
+        "title": "Edit Content Settings"
+    },
+    "pagination": {
+        "pagingInfo": "Displaying {firstItem} to {lastItem} of {totalItems} items",
+        "ariaPreviousPage": "Previous page",
+        "ariaNextPage": "Next page"
+    },
+    "results": {
+        "previewText": "Preview on site"
+    },
+    "search": {
+        "noResults": "No results found.",
+        "placeholderSearchText": "Content Search",
+        "resultOrderMessage": "Order of results is determined by the content provider",
+        "searchBoxAriaLabel": "Search Input",
+        "sortFilterGroupsLabel": "Filter results",
+        "title": "Giphy Search",
+        "options": {
+            "sortByDate": "Sort by date",
+            "sortByRating": "Sort by rating",
+            "sortByRelevance": "Sort by relevance",
+            "sortByTitle": "Sort by title",
+            "sortByViewCount": "Sort by view count",
+            "updatedAnytime": "Updated anytime",
+            "updatedPastYear": "Updated in the past year",
+            "updatedPast3Months": "Updated in the past 3 months"
+        }
+    },
+    "validations": {
+        "isRequired": "This is a required field"
+    }
+}
