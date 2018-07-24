@@ -2,6 +2,24 @@
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HappyPack = require('happypack');
+
+// Max thread pool size for parallel tasks
+const THREAD_POOL_SIZE = 4;
+
+const happyThreadPool = HappyPack.ThreadPool({
+  // Sets the thread pool to
+  size: THREAD_POOL_SIZE
+})
+
+const createHappyLoader = (id, loaders, cache = true) => {
+    return new HappyPack({
+        id: id,
+        loaders: loaders,
+        threadPool: happyThreadPool,
+        cache: cache
+    });
+}
 
 exports.devServer = options => ({
     devServer: {
@@ -34,6 +52,37 @@ exports.processReact = (paths, withHotLoader) => ({
         ],
     },
 });
+
+exports.processTypescript = (paths, withHotLoader) => {
+    return {
+        module: {
+            rules: [
+                {
+                    test: /\.tsx?$/,
+                    include: paths,
+                    use: (withHotLoader) ? [
+                        {
+                            loader: 'happypack/loader?id=ts',
+                            options: {
+                                babelrc: false,
+                                plugins: [
+                                    createHappyLoader('ts', [{
+                                        path: 'react-hot-loader/babel',
+                                        query: {
+                                            happyPackMode: true
+                                        }
+                                    }])
+                                ]
+                            },
+                        },
+                        'ts-loader'
+                    ] :
+                    'ts-loader',
+                },
+            ],
+        },
+    }
+};
 
 exports.lintJavaScript = ({ paths, options }) => ({
     module: {

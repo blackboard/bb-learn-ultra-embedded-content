@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es6",
+		"baseUrl": ".",
+		"rootDir": "./src/",
+		"typeRoots": ["node_modules/@types", "typings"],
+		"declaration": false,
+		"removeComments": false,
+		"noLib": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"inlineSources": true,
+		"paths": {
+			"react": ["node_modules/@types/react"]
+		},
+		"pretty": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noImplicitAny": true,
+		"noImplicitReturns": false,
+		"noImplicitUseStrict": false,
+		"noFallthroughCasesInSwitch": true,
+		"moduleResolution": "node",
+		"outDir": "build/develop",
+		"jsx": "react"
+	},
+	"files": [
+		"src/app.d.ts"
+	],
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules/**/*.*"
+	],
+	"compileOnSave": false
+}

@@ -1,0 +1,54 @@
+{
+  "name": "getting-started",
+  "version": "0.0.16",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --env production",
+    "build:watch": "webpack --watch --env production",
+    "lint:fix": "eslint --ext .jsx,.js --fix ./",
+    "lint": "eslint --ext .jsx,.js ./",
+    "preinstall": "rm -f package-lock.json*",
+    "start": "npm run server:dev",
+    "server": "webpack-dev-server --env development",
+    "server:dev": "nodemon --watch webpack.config.js --exec \"npm run server\"",
+    "test": "npm run lint:fix && jest --no-cache",
+    "test:update": "jest -u",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^20.0.4",
+    "nodemon": "^1.18.3",
+    "react-test-renderer": "^16.0.0",
+    "tslint": "^5.11.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "jest": {
+    "globals": {
+      "window": {
+        "location": {
+          "origin": "https://www.example.com/"
+        }
+      }
+    },
+    "moduleNameMapper": {
+      "^.+\\.(css|scss|svg)$": "identity-obj-proxy"
+    },
+    "setupFiles": [],
+    "setupTestFrameworkScriptFile": "./test-setup.js",
+    "testURL": "https://www.example.com/",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}
