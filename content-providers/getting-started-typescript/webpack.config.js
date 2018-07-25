@@ -41,6 +41,7 @@ const buildDev = () => merge([
     common,
     parts.clean(PATHS.build, ['index.html']),
     {
+        mode: 'development',
         plugins: [
             new webpack.WatchIgnorePlugin([
                 path.join(__dirname, 'node_modules'),
@@ -63,6 +64,7 @@ const buildDev = () => merge([
 const buildProd = () => merge([
     common,
     {
+        mode: 'production',
         plugins: [
             new webpack.HashedModuleIdsPlugin(),
             new HtmlWebpackPlugin({

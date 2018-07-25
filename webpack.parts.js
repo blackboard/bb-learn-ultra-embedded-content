@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HappyPack = require('happypack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 // Max thread pool size for parallel tasks
 const THREAD_POOL_SIZE = 4;
@@ -164,14 +165,22 @@ exports.generateSourcemaps = type => ({
 });
 
 exports.minifyJavaScript = ({ useSourceMap }) => ({
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: useSourceMap,
-            compress: {
-                warnings: false,
-            },
-        }),
-    ],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                uglifyOptions: {
+                    compress: {
+                        warnings: false,
+                    },
+                    ecma: 6,
+                    mangle: true
+                },
+                sourceMap: useSourceMap
+            })
+        ]
+    }
 });
 
 exports.setFreeVariable = (key, value) => {
