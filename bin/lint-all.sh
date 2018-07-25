@@ -10,4 +10,4 @@ do
     cd ../..
 done
 
-echo -e ${YELLOW}"Linting complete!"${NC}
+echo -e ${YELLOW}"Linting completed!"${NC}

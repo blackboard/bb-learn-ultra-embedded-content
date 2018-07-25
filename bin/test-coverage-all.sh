@@ -11,4 +11,4 @@ do
     cd ../..
 done
 
-echo -e ${YELLOW}"Testing w/ coverage complete!"${NC}
+echo -e ${YELLOW}"Testing w/ coverage completed!"${NC}

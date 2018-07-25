@@ -10,4 +10,4 @@ do
     cd ../..
 done
 
-echo -e ${YELLOW}"Testing complete!"${NC}
+echo -e ${YELLOW}"Testing completed!"${NC}

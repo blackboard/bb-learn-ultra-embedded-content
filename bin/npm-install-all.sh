@@ -23,4 +23,4 @@ for d in packages/*; do
         cd ../..
     fi
 done
-echo -e ${YELLOW}"bb-library-ui-components and UI Packages install complete!"${NC}
+echo -e ${YELLOW}"Libraries and UI Packages install completed!"${NC}

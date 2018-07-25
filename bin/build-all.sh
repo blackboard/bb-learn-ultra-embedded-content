@@ -12,4 +12,4 @@ for d in packages/*; do
     fi
 done
 
-echo -e ${YELLOW}"Building complete!"${NC}
+echo -e ${YELLOW}"Building completed!"${NC}
