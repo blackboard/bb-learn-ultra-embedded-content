@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack --env production",
     "build:watch": "webpack --watch --env production",
-    "lint:fix": "tslint --fix -p ./",
-    "lint": "tslint -p ./",
+    "lint:fix": "eslint --ext .jsx,.js --fix ./ && tslint --fix -p ./",
+    "lint": "eslint --ext .jsx,.js ./ && tslint -p ./",
     "preinstall": "rm -f package-lock.json*",
     "start": "npm run server:dev",
     "server": "webpack-dev-server --env development",
@@ -25,13 +25,22 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "html-webpack-plugin": "^3.2.0",
     "jest": "^20.0.4",
     "nodemon": "^1.18.3",
     "react-test-renderer": "^16.0.0",
     "tslint": "^5.11.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack": "^4.16.2",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.3"
   },
   "jest": {
     "globals": {
@@ -41,14 +50,24 @@
         }
       }
     },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
     "moduleNameMapper": {
       "^.+\\.(css|scss|svg)$": "identity-obj-proxy"
     },
     "setupFiles": [],
-    "setupTestFrameworkScriptFile": "./test-setup.js",
+    "setupTestFrameworkScriptFile": "./test-setup.ts",
     "testURL": "https://www.example.com/",
     "transform": {
+      "^.+\\.tsx?$": "ts-jest",
       "^.+\\.jsx?$": "babel-jest"
-    }
+    },
+    "testRegex": "/__tests__/.*\\.(tsx?|jsx?)$"
   }
 }

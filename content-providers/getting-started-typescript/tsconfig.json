@@ -27,7 +27,8 @@
 		"jsx": "react"
 	},
 	"files": [
-		"src/app.d.ts"
+		"src/app.d.ts",
+		"src/unit_test.d.ts"
 	],
 	"include": [
 		"src/**/*"

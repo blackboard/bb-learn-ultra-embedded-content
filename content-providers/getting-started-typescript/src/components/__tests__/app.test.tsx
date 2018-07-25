@@ -1,9 +1,9 @@
-import React from 'react';
-import {shallow} from 'enzyme'; // eslint-disable-line
+import * as React from 'react';
+import { shallow } from 'enzyme'; // tslint:disable-line:no-implicit-dependencies
 import App from '../app';
 
 describe('App', () => {
-    let wrapper = null;
+    let wrapper: any = null;
 
     beforeEach(() => {
         wrapper = shallow(<App title={'Hello, Test Component!'} />);

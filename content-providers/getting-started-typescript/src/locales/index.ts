@@ -1,6 +1,11 @@
-import en from './en/dictionary.json';
+// NOTE: Add additional language dictionary.json files and import them to support localization
+import * as en from './en/dictionary.json';
 
-const localesConfig = {
+interface ILocalesConfig {
+    [key: string]: any;
+}
+
+const localesConfig: ILocalesConfig = {
     en,
 };
 

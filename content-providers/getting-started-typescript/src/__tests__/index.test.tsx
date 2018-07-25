@@ -1,5 +1,5 @@
 describe('Index file', () => {
-    let someValue = null;
+    let someValue: string = null;
 
     beforeEach(() => {
         someValue = 'Hello, Test!';

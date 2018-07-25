@@ -52,6 +52,7 @@ const buildDev = () => merge([
             }),
         ],
     },
+    // This requires authentication so we serve development through a local build with login
     parts.devServer({
         host: process.env.HOST || 'localhost',
         port: process.env.PORT || 9901,
