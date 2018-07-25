@@ -3,10 +3,13 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 set -e
 
-for d in content-providers/*;
-do
-    cd ${d}
-    echo -e ${YELLOW}"Starting build: ${d}"${NC}
-    npm run build
-    cd ../..
+for d in packages/*; do
+    if [ "$d" != "packages/bb-library-ui-components" ] && [ "$d" != "packages/bb-library-utilities" ]; then
+        cd ${d}
+        echo -e ${YELLOW}"Starting build: ${d:9}"${NC}
+        npm run build
+        cd ../..
+    fi
 done
+
+echo -e ${YELLOW}"Building complete!"${NC}

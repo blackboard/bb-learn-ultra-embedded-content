@@ -2,16 +2,12 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 set -e
 
-for d in content-providers/*;
+for d in packages/*;
 do
     cd ${d}
-    echo -e ${YELLOW}"Running linter: ${d}"${NC}
+    echo -e ${YELLOW}"Running linter: ${d:9}"${NC}
     npm run lint
     cd ../..
 done
 
-cd library
-echo -e ${YELLOW}"Running linter: library"${NC}
-npm run lint
-cd ..
 echo -e ${YELLOW}"Linting complete!"${NC}

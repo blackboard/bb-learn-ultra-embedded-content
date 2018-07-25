@@ -4,15 +4,15 @@
   "description": "Repository for Blackboard partners to build content UI and embed content in Learn Ultra",
   "main": "webpack.parts.js",
   "scripts": {
-    "build": "sh bin/build-all.sh",
-    "lint": "sh bin/lint-all.sh",
+    "build:all": "sh bin/build-all.sh",
+    "lint:all": "sh bin/lint-all.sh",
     "install:all": "npm i && sh bin/npm-install-all.sh",
     "preinstall": "rm -f package-lock.json*",
-    "test": "sh bin/test-all.sh",
-    "test:coverage": "sh bin/test-coverage-all.sh"
+    "test:all": "sh bin/test-all.sh",
+    "test:coverage:all": "sh bin/test-coverage-all.sh"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/enzyme": "^3.1.12",
     "@types/enzyme-adapter-react-16": "^1.0.2",

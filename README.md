@@ -1,11 +1,11 @@
 # Blackboard Learn Ultra Embedded Content
-This repo provides a library and utilities, as well as a getting started project, for building a Blackboard style content provider to embed content in Learn Ultra.
+This repo provides a bb-library-ui-components and utilities, as well as a getting started project, for building a Blackboard style content provider to embed content in Learn Ultra.
 
 # NPM Commands
 
 ## How to run scripts in all sub-folders
 
-Starting in the root, top-level directory, the following will run scripts at the root level, the `/library` folder, and each sub-project in the `/content-providers` folder
+Starting in the root, top-level directory, the following will run scripts at the root level and each "node package" in the `/packages` folder starting first with the library packages
 
 ### Install all dependencies
 ```bash
@@ -14,19 +14,19 @@ npm run install:all
 
 ### Run all tests
 ```bash
-npm test
+npm run test:all
 ```
 
 ### Run all tests with coverage
 ```bash
-npm run test:coverage
+npm run test:coverage:all
 ```
 
 This command will create a `/coverage` folder. In this folder, there will be a file called `clover.xml`. In addition, Jest also creates an html report in `/coverage/lcov-report/index.html`
 
 ### Run all linters
 ```bash
-npm run lint
+npm run lint:all
 ```
 
 # Posting Messages
@@ -119,13 +119,28 @@ Example 1
 > 'content': 'object containing 'dataContent'
  and 'dataType' for editing existing mashups
 # More Info
-Check the `content-providers/getting-started` directory for step-by-step instructions to create and develop a new content provider.
+Check the `packages/bb-ui-getting-started` or `packages/bb-ui-getting-started-typescript` directory for step-by-step instructions to create and develop a new content provider.
 
 ## Helper Utilities and Libraries
 
 Find access to some common utilities/libraries that we have included to help match the styling and UX choices found in Ultra UI. We have also included various javascript utilities that we find helpful for our internal development workflow.
 
+### How to Include a component
 Simply add an import to the top of a file, ie.
 ```javascript
-import { someUtility } from '/library/utilities'
+import { Spinner } from '../packages/bb-library-ui-components/react'
+```
+NOTE: Typescript requires a different import format for resolving .js files
+```javascript
+import { Spinner } from '../packages/bb-library-ui-components/react/index.js'
+```
+
+### How to Include a utility
+Simply add an import to the top of a file, ie.
+```javascript
+import { configureTranslator } from '../packages/bb-library-utilities/main'
+```
+NOTE: Typescript requires a different import format for resolving .js files
+```javascript
+import { configureTranslator } from '../packages/bb-library-utilities/main/index.js'
 ```
