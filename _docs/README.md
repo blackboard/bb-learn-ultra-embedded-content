@@ -5,7 +5,7 @@ This repo provides a bb-library-ui-components and utilities, as well as a gettin
 
 ## How to run scripts in all sub-folders
 
-You can simple run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then cd into the respective folder and use the scripts provided in its `package.json`...or try the following commands to install *everything*. Starting in the root, top-level directory, the following will run scripts at the root level and each "node package" in the libraries, example apps, and getting started apps starting first with the library packages.
+You can simply run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then cd into the respective folder and use the scripts provided in its `package.json`...or try the following commands to install *everything*. Starting in the root, top-level directory, the following will run scripts at the root level and each "node package" in the libraries, example apps, and getting started apps starting first with the library packages.
 
 
 ### Install all dependencies
