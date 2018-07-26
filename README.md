@@ -4,7 +4,7 @@ This repo provides *getting started* project directories (node packages) as well
 # NPM Commands
 
 ## Setting Things Up
-You can simpye run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then `cd` into the respective folder, run `npm install` , and use the scripts provided in the (sub-package) `package.json` to install, develop, run locally, test, and eventually build/compile to the (sub-package) `/build` directory. `npm start` will run a serve the app locally at **http://localhost:4321** This will output a `bundle.js`, `bundle.js.map`, `index.html`, `styles.css`, and `styles.css.map`. Some commands may require prepending with `sudo` depending on your local configuration.
+You can simply run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then `cd` into the respective folder, run `npm install` , and use the scripts provided in the (sub-package) `package.json` to install, develop, run locally, test, and eventually build/compile to the (sub-package) `/build` directory. `npm start` will run a serve the app locally at **http://localhost:4321** This will output a `bundle.js`, `bundle.js.map`, `index.html`, `styles.css`, and `styles.css.map`. Some commands may require prepending with `sudo` depending on your local configuration.
 
 # Posting Messages
 The enclosing window will accept messages sent from each content provider. See javascript's `postMessage` api for further details.
