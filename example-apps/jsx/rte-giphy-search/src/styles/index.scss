@@ -1,0 +1,48 @@
+// NOTE: Tailwind is a helper css package for mobile-first, responsive design and common style formats
+@import './search-edit';
+
+// Stylesheet options (choose one or the other)
+// @import './search-result';
+@import './search-result-tiles';
+
+html {
+  min-height: 20rem;
+  overflow-y: hidden; //Prevent the double-scrollbar effect when there are many search results
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #FFFFFF;
+  color: #262626;
+}
+
+#app {
+  height: 100%;
+  
+  .container {
+    padding: 1rem;
+  }
+
+  .app-container {
+    height: 100%;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+    padding: 1rem 1.25rem;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

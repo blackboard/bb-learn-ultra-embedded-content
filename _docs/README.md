@@ -1,10 +1,35 @@
 # Blackboard Learn Ultra Embedded Content
-This repo provides *getting started* project directories (node packages) as well as common library React Components, utilities, and styles, for building an app that can be hosted and launched with LTI and communicate data back and forth with Learn on the front-end (using [PostMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) events). An app can also be launched as a "mashup" from the Rich Text Editor to embed content (or even an iFrame) directly in the content editor/authoring space.
+This repo provides a bb-library-ui-components and utilities, as well as a getting started project, for building a Blackboard style content provider to embed content in Learn Ultra.
 
 # NPM Commands
 
-## Setting Things Up
-You can simpye run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then `cd` into the respective folder, run `npm install` , and use the scripts provided in the (sub-package) `package.json` to install, develop, run locally, test, and eventually build/compile to the (sub-package) `/build` directory. `npm start` will run a serve the app locally at **http://localhost:4321** This will output a `bundle.js`, `bundle.js.map`, `index.html`, `styles.css`, and `styles.css.map`. Some commands may require prepending with `sudo` depending on your local configuration.
+## How to run scripts in all sub-folders
+
+You can simple run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then cd into the respective folder and use the scripts provided in its `package.json`...or try the following commands to install *everything*. Starting in the root, top-level directory, the following will run scripts at the root level and each "node package" in the libraries, example apps, and getting started apps starting first with the library packages.
+
+
+### Install all dependencies
+You can simple run `npm install` to install the root level devDependencies that are used by all librarys/example-apps or you can run the following to run `npm install` in every app folder that has its own `package.json`
+```bash
+npm run install:all
+```
+
+### Run all tests
+```bash
+npm run test:all
+```
+
+### Run all tests with coverage
+```bash
+npm run test:coverage:all
+```
+
+This command will create a `/coverage` folder. In this folder, there will be a file called `clover.xml`. In addition, Jest also creates an html report in `/coverage/lcov-report/index.html`
+
+### Run all linters
+```bash
+npm run lint:all
+```
 
 # Posting Messages
 The enclosing window will accept messages sent from each content provider. See javascript's `postMessage` api for further details.
@@ -96,33 +121,27 @@ Example 1
 > 'content': 'object containing 'dataContent' and 'dataType' for editing existing mashups
 
 # More Info
-Check the `getting-started/typescript-react` or `getting-started/javascript-react` directory for step-by-step instructions to create and develop a new LTI single page application for launch. This is a good starting point for understanding the front-end communcation between Blackboard Learn Ultra's `Window` and the `iFrame` that your LTI app will launch in.
+Check the `getting-started/typescript-react` or `getting-started/javascript-react` directory for step-by-step instructions to create and develop a new LTI single page application for launch.
 
-# Helper Utilities and Libraries
+## Helper Utilities and Libraries
 Find access to some common utilities/libraries that we have included to help match the styling and UX choices found in Ultra UI. We have also included various javascript utilities that we find helpful for our internal development workflow.
 
-**TODO**: Add build config (write in typescript, compile to javascript) and implement proper tree-shaking to reduce compile size and consider ways to leverage Blackboard's in-house library to reduce duplicate work.
-
 ### How to include a Component
----
 Simply add an import to the top of a file, ie.
 ```javascript
-import { Spinner } from '../bb-public-library/react-components/lib'
+import Spinner from '../bb-public-library/react-components/lib/spinner'
 ```
 NOTE: Typescript requires a different import format for resolving .js files
 ```javascript
-import { Spinner } from '../bb-public-library/react-components/lib/index.js'
+import Spinner from '../bb-public-library/react-components/lib/spinner.jsx'
+```
 
 ### How to Include a utility
----
 Simply add an import to the top of a file, ie.
 ```javascript
-import { configureTranslator } from '../bb-public-library/utilities/lib'
+import { configureTranslator } from '../bb-public-library/utilities/lib/localization'
 ```
 NOTE: Typescript requires a different import format for resolving .js files
 ```javascript
-import { configureTranslator } from '../bb-public-library/utilities/lib/index.js'
+import { configureTranslator } from '../bb-public-library/utilities/lib/localization.js'
 ```
-
-# Documentation for Developers of this Entire Repo
-~ [`_docs/README.md`](./_docs/#readme)

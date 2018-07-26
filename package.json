@@ -4,12 +4,13 @@
   "description": "Repository for Blackboard partners to build content UI and embed content in Learn Ultra",
   "main": "webpack.parts.js",
   "scripts": {
-    "build:all": "sh bin/build-all.sh",
-    "lint:all": "sh bin/lint-all.sh",
-    "install:all": "npm i && sh bin/npm-install-all.sh",
+    "build:all": "sh _bin/apply-to-all.sh 'npm run build'",
+    "clean:all": "rm -rf node_modules && sh _bin/apply-to-all.sh 'rm -rf node_modules'",
+    "lint:all": "sh _bin/apply-to-all.sh 'npm run lint'",
+    "install:all": "sh _bin/apply-to-all.sh 'npm install'",
     "preinstall": "rm -f package-lock.json*",
-    "test:all": "sh bin/test-all.sh",
-    "test:coverage:all": "sh bin/test-coverage-all.sh"
+    "test:all": "sh _bin/apply-to-all.sh 'npm test'",
+    "test:coverage:all": "sh _bin/apply-to-all.sh 'npm run test:coverage'"
   },
   "author": "",
   "license": "MIT",

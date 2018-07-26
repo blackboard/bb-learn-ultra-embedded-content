@@ -1,2 +1,0 @@
-# Building an Embeddable Content Provider
-WIP: The following will outline the required steps for designing and developing a content provider for Blackboard integration. After completing the last step, a content provider can be initialized from the editor (in respective courses) for the purpose of adding external content directly to the Blackboard Learn application. Until we have fully vetted this feature for external development, use the "getting'started" directory to build a Single Page Application that can eventually be integraded with Learn Ultra.
