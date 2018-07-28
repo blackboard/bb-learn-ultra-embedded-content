@@ -24,6 +24,11 @@ const common = merge([
         },
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+            alias: {
+                'bb-public-library/react-components': path.join(__dirname, '../../bb-public-library/react-components/lib'),
+                'bb-public-library/styles': path.join(__dirname, '../../bb-public-library/styles/lib'),
+                'bb-public-library/utilities': path.join(__dirname, '../../bb-public-library/utilities/lib'),
+            },
         },
         plugins: [
             new webpack.NoEmitOnErrorsPlugin(),

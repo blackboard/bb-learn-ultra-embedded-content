@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonPrimary, ButtonSecondary, Input, RadioGroup } from '../../../../../bb-public-library/react-components/lib';
+import { ButtonPrimary, ButtonSecondary, Input, RadioGroup } from 'bb-public-library/react-components';
 import SearchResult from './search-result';
 import { CONTENT_DISPLAY_TYPES } from '../constants';
 

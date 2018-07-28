@@ -1,3 +1,6 @@
+// Styles
+import 'bb-public-library/styles/index.scss';
+
 // Forms
 import ButtonPrimary from './forms/button-primary';
 import ButtonSecondary from './forms/button-secondary';
@@ -14,9 +17,6 @@ import Spinner from './spinner';
 import configureSearchContainer from './search/configure-search-container';
 import configureSearchResults from './search/configure-search-results';
 import SearchFieldsContainer from './search/search-fields-container';
-
-// Styles
-import './styles/index.scss';
 
 export {
     // Forms

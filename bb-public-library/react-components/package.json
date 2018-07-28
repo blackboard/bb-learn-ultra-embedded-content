@@ -28,6 +28,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-alias": "^1.1.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
@@ -39,16 +40,5 @@
     "react-test-renderer": "^16.0.0",
     "webpack": "^4.16.2",
     "webpack-merge": "^4.1.3"
-  },
-  "jest": {
-    "coverageDirectory": "../coverage/",
-    "moduleNameMapper": {
-      "^.+\\.(css|scss|svg)$": "identity-obj-proxy"
-    },
-    "setupFiles": [],
-    "setupTestFrameworkScriptFile": "./test-setup.js",
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
   }
 }

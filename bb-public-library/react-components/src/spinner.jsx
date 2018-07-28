@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles/spinner.scss';
+import 'bb-public-library/styles/spinner.scss';
 
 const Spinner = ({ ariaLive, ariaRole, isLoading, size, statusMessage }) => {
     if (isLoading) {

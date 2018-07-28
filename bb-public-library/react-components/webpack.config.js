@@ -22,7 +22,11 @@ const common = merge([
             libraryTarget: 'umd',
         },
         resolve: {
-            extensions: ['.js', '.jsx', '.json'],
+            extensions: ['.js', '.jsx', '.json', '.scss'],
+            alias: {
+                'bb-public-library/styles': path.join(__dirname, '../styles/lib'),
+                'bb-public-library/utilities': path.join(__dirname, '../utilities/lib'),
+            },
         },
         plugins: [
             new webpack.NoEmitOnErrorsPlugin(),

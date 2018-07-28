@@ -1,17 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
+import {
+    configureSearchContainer,
+    ButtonSecondary,
+    Spinner,
+} from 'bb-public-library/react-components';
 import SearchResult from './components/search-result';
 import translator from './services/translator';
 import YouTubeService from './services/you-tube-service';
 import EditItem from './components/edit-item';
 import { MESSAGE_TYPES, SORT_FILTER_CONFIG, EMBED_URL_PREFIX, WORKFLOW_STATES } from './constants';
-import {
-    configureSearchContainer,
-    ButtonSecondary,
-    Spinner,
-} from '../../../../bb-public-library/react-components/lib';
-
 
 class App extends React.Component {
     constructor(props) {
@@ -51,6 +50,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        // Post a message to Bb Learn after the mashup UI renders
         this.postMessage({
             messageType: MESSAGE_TYPES.outgoing.pageLoaded,
         });

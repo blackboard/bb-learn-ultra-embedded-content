@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import 'bb-public-library/styles/icons.scss';
 import Input from './input';
-import '../styles/icons.scss';
 import VALIDATIONS from './constants/validations';
 
 class SearchBox extends React.Component {

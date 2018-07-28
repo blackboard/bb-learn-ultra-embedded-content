@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme'; // eslint-disable-line
+import { shallow } from 'enzyme';
+import { ButtonSecondary } from 'bb-public-library/react-components';
 import SearchResult from '../search-result';
-import { ButtonSecondary } from '../../../../../../bb-public-library/react-components/lib';
 
 describe('SearchResult', () => {
     let wrapper = null;

@@ -6,8 +6,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles/icons.scss';
-import './styles/pagination.scss';
+import 'bb-public-library/styles/icons.scss';
+import 'bb-public-library/styles/pagination.scss';
 import { calculatePages } from '../../utilities/lib';
 
 const PaginationControls = ({ disabled, hideFirstLastButtons, pagination, translate, handlePageChange, showResultsCount }) => {

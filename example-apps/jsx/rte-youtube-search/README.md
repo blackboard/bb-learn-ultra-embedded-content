@@ -1,6 +1,8 @@
 # YouTube Search Content Provider
 YouTube Search provides an interface to search YouTube for relevant content and select a video from search results.
 
+TODO: This is configured to use some form of authorization with BbLearn. Update to run locally, and mock the authorization for demonstration
+
 # NPM Commands
 
 ## How to install dependencies

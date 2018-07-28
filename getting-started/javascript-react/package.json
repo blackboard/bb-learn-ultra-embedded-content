@@ -30,8 +30,9 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-alias": "^1.1.0",
     "eslint-loader": "^2.1.0",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "html-webpack-plugin": "^3.2.0",
@@ -41,23 +42,5 @@
     "webpack": "^4.16.2",
     "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.3"
-  },
-  "jest": {
-    "globals": {
-      "window": {
-        "location": {
-          "origin": "https://www.example.com/"
-        }
-      }
-    },
-    "moduleNameMapper": {
-      "^.+\\.(css|scss|svg)$": "identity-obj-proxy"
-    },
-    "setupFiles": [],
-    "setupTestFrameworkScriptFile": "./test-setup.js",
-    "testURL": "https://www.example.com/",
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
   }
 }

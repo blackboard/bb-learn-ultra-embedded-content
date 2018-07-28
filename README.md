@@ -125,4 +125,8 @@ import { configureTranslator } from '../bb-public-library/utilities/lib/index.js
 ```
 
 # Documentation for Developers of this Entire Repo
-~ [`_docs/README.md`](./_docs/#readme)
+* [`_docs/README.md`](./_docs/#readme)
+
+# Troubleshooting
+* Scripts and npm commands may require `sudo` depending on your configuration
+* Check that you are using the latest versions of npm and node (we were using npm@5.3.0 and node@10.6.0 when this was written)

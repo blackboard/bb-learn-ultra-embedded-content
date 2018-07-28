@@ -11,6 +11,5 @@ NOTE: Typescript requires a different import format for resolving .js files
 import { Spinner } from '../bb-public-library/react-components/lib/index.js'
 ```
 
-TODO: Extract styles into a different repo, support tree-shaking
-
-TODO: Alias in webpack config for easier import (reduce ../../../)
+TODO: Verify support for tree-shaking
+TODO: Convert to Typescript

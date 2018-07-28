@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import { ButtonSecondary } from '../../../../../bb-public-library/react-components/lib';
+import { ButtonSecondary } from 'bb-public-library/react-components';
 
 const SearchResult = ({ result, onContentSelect, translate }) => {
     const selectResult = selection => () => onContentSelect(selection);

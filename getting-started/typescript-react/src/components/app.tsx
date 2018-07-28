@@ -3,7 +3,7 @@ import { MESSAGE_TYPES, EMBED_URL_PREFIX, WORKFLOW_STATES } from '../constants';
 import {
     ButtonSecondary,
     Spinner,
-} from '../../../../bb-public-library/react-components/lib/index.js';
+} from 'bb-public-library/react-components/index.js'; //tslint:disable-line:no-implicit-dependencies
 import translator from '../services/translator';
 
 declare global {

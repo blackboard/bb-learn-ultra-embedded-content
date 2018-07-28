@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MESSAGE_TYPES, EMBED_URL_PREFIX, WORKFLOW_STATES } from '../constants';
 import {
     ButtonSecondary,
     Spinner,
-} from '../../../../bb-public-library/react-components/lib';
+} from 'bb-public-library/react-components';
+import { MESSAGE_TYPES, EMBED_URL_PREFIX, WORKFLOW_STATES } from '../constants';
 import translator from '../services/translator';
 
 export default class App extends React.Component {
@@ -36,7 +36,7 @@ export default class App extends React.Component {
         this.postMessage({
             messageType: MESSAGE_TYPES.outgoing.pageLoaded,
         });
-        // Let's mock the receiveMessage event by posting a message locally
+        // Let's mock Bb Learn's reaction previous message by posting back to this app from window (ie. Learn's Window)
         window.postMessage({
             config: {
                 locale: 'en',

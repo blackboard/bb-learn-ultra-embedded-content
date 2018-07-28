@@ -1,14 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
-import EditItem from './edit-item';
-import SearchResult from './search-result';
-import { MESSAGE_TYPES, SORT_FILTER_CONFIG, WORKFLOW_STATES } from '../constants';
 import {
     configureSearchContainer,
     ButtonSecondary,
     Spinner,
-} from '../../../../../bb-public-library/react-components/lib';
+} from 'bb-public-library/react-components';
+import EditItem from './edit-item';
+import SearchResult from './search-result';
+import { MESSAGE_TYPES, SORT_FILTER_CONFIG, WORKFLOW_STATES } from '../constants';
+
 import translator from '../services/translator';
 import GiphyService from '../services/giphy-service';
 
