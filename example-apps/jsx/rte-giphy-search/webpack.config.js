@@ -39,6 +39,7 @@ const common = merge([
     parts.loadSvg(),
     parts.processReact([PATHS.app, PATHS.reactComponents], false),
     parts.generateSourcemaps('source-map'),
+    parts.deDupe(),
 ]);
 
 const buildDev = () => merge([

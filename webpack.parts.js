@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HappyPack = require('happypack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -21,6 +22,15 @@ const createHappyLoader = (id, loaders, cache = true) => {
         cache: cache
     });
 }
+
+exports.deDupe = () => ({
+    plugins: [new DuplicatePackageCheckerPlugin(
+        {
+            // Also show module that is requiring each duplicate package (default: false)
+            verbose: true,
+        }
+    )]
+});
 
 exports.devServer = options => ({
     devServer: {

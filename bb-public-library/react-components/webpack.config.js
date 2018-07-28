@@ -36,6 +36,7 @@ const common = merge([
     parts.loadSASS(),
     parts.loadSvg(),
     parts.processReact([PATHS.app, PATHS.utils], false),
+    parts.deDupe(),
 ]);
 
 const buildDev = () => merge([

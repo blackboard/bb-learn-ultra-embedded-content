@@ -40,6 +40,7 @@ const common = merge([
     parts.processReact([PATHS.app, PATHS.reactComponents], false),
     parts.processTypescript([PATHS.app], false),
     parts.generateSourcemaps('source-map'),
+    parts.deDupe(),
 ]);
 
 const buildDev = () => merge([
