@@ -62,12 +62,15 @@ Example 2
 ```
 #### accepted values
 `messageType`:
->'content_canceled': Close the dialog, canceling any actions,
-
->'content_ready': Send with content to signal change in ultra and apply to editor
+>'content_canceled' - Close the dialog, canceling any actions,
+>'content_ready' - Send with content to signal change in ultra and apply to editor
 
 `dataType`:
-> 'link', 'image', 'audio', 'video', 'embedded-app'
+> 'link'
+> 'image'
+> 'audio'
+> 'video'
+> 'embedded-app'
 
 # Receiving Messages
 Add an event listener on `componentWillMount` to to handle messages posted from Blackboard Learn.
@@ -108,7 +111,7 @@ Example 1
 
 #### accepted values
 `messageType`:
->'init_content': Load the iFrame/mashup with respective configuration
+>'init_content' - Load the iFrame/mashup with respective configuration
 
 `config`:
 > 'apiBasePath': 'base api path for server queries'
