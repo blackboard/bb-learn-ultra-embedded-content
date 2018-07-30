@@ -9,7 +9,7 @@ You can simply run `npm install` to install the root level devDependencies that 
 For example:
 ```bash
 npm install
-cd example-apps/jsx/giphy-search
+cd example-apps/jsx/rte-giphy-search
 npm install
 npm start
 ```
