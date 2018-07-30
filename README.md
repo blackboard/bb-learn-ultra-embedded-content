@@ -63,6 +63,7 @@ Example 2
 #### accepted values
 `messageType`:
 >'content_canceled' - Close the dialog, canceling any actions,
+
 >'content_ready' - Send with content to signal change in ultra and apply to editor
 
 `dataType`:
@@ -115,11 +116,14 @@ Example 1
 
 `config`:
 > 'apiBasePath': 'base api path for server queries'
+
 > 'locale': 'localization string to select current locale'
+
 > 'xsrfToken': 'token for secure server transactions'
 
 `dataToDisplay`:
 > 'mode': '"create", "edit", or "view"'
+
 > 'content': 'object containing 'dataContent' and 'dataType' for editing existing mashups
 
 # More Info
