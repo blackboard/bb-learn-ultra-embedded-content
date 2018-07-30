@@ -19,6 +19,17 @@ npm start
 ## Next Steps
 To build your own LTI User Interface, duplicate one of the directories from `/getting-started` and rename it. Work from the new directory to develop and test locally. Run `npm start` to see the app running in a local browser at **http://localhost:4321**. The code base attempts to provide a working knowledge of how PostMessage works to communicate data in the form of JSON to and from Bb Learn. Be creative and build off of this as a starting point. When the app is tested and complete run `npm build` to output static HTML, CSS, and Javascript to the build folder. These files can then be hosted on a server at a URI that Learn can connect to in order to display your LTI app UI.
 
+For example:
+```bash
+git clone https://github.com/blackboard/bb-learn-ultra-embedded-content.git
+cd bb-learn-ultra-embedded-content
+npm install
+cp getting-started/typescript-react getting-started/my-awesome-app -a
+cd getting-started/my-awesome-app
+npm install
+npm start
+```
+
 # Posting Messages
 The enclosing window will accept messages sent from each content provider. See javascript's `postMessage` api for further details.
 
