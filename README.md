@@ -1,7 +1,7 @@
 # Blackboard Learn Ultra Embedded Content
 This repo provides *getting started* project directories (node packages) as well as common library React Components, utilities, and styles, for building an app that can be hosted and launched with LTI and communicate data back and forth with Learn on the front-end (using [PostMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) events). An app can also be launched as a "mashup" from the Rich Text Editor to embed content (or even an iFrame) directly in the content editor/authoring space.
 
-# NPM Commands
+# Getting Started
 
 ## Setting Things Up
 You can simply run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then `cd` into the respective folder, run `npm install` , and use the scripts provided in the (sub-package) `package.json` to install, develop, run locally, test, and eventually build/compile to the (sub-package) `/build` directory. `npm start` will serve the app locally at **http://localhost:4321**. This will output a `bundle.js`, `bundle.js.map`, `index.html`, `styles.css`, and `styles.css.map`. Some commands may require prepending with `sudo` depending on your local configuration.
