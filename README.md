@@ -66,12 +66,7 @@ Example 2
 
 >'content_ready' - Send with content to signal change in ultra and apply to editor
 
-`dataType`:
-> 'link'
-> 'image'
-> 'audio'
-> 'video'
-> 'embedded-app'
+`dataType`: 'link', 'image', 'audio', 'video', or 'embedded-app'
 
 # Receiving Messages
 Add an event listener on `componentWillMount` to to handle messages posted from Blackboard Learn.
