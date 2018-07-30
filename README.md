@@ -8,6 +8,8 @@ You can simply run `npm install` to install the root level devDependencies that 
 
 For example:
 ```bash
+git clone https://github.com/blackboard/bb-learn-ultra-embedded-content.git
+cd bb-learn-ultra-embedded-content
 npm install
 cd example-apps/jsx/rte-giphy-search
 npm install
