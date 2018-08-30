@@ -1,5 +1,5 @@
+import { configureTranslator } from 'bb-public-library/utilities'; /* tslint:disable-line no-implicit-dependencies */
 import locales from '../locales';
-import { configureTranslator } from 'bb-public-library/utilities';
 
 const translator = configureTranslator(locales);
 
