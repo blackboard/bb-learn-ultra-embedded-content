@@ -24,7 +24,7 @@ For example:
 git clone https://github.com/blackboard/bb-learn-ultra-embedded-content.git
 cd bb-learn-ultra-embedded-content
 npm install
-cp example-apps/getting-started/typescript-react example-apps/getting-started/my-awesome-app -a
+cp -a example-apps/getting-started/typescript-react example-apps/getting-started/my-awesome-app
 cd example-apps/getting-started/my-awesome-app
 npm install
 npm start
