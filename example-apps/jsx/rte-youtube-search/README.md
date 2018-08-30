@@ -1,7 +1,7 @@
 # YouTube Search Content Provider
-YouTube Search provides an interface to search YouTube for relevant content and select a video from search results.
+YouTube Search provides an interface to search YouTube for relevant content and select a video from search results. This is an example fo a user interface that you can host on a server and use as an integration point with Learn Ultra's UI. It can be intitiated through LTI and rendered in an iFrame in various locations on the Ultra frontend. Check the root README for more information.
 
-TODO: This is configured to use some form of authorization with BbLearn. Update to run locally, and mock the authorization for demonstration
+NOTE: This will not render locally as expected, because it relies on PostMessage configuration from a working Learn Ultra environment
 
 # NPM Commands
 
@@ -9,11 +9,10 @@ TODO: This is configured to use some form of authorization with BbLearn. Update 
 
 Starting in the root, top-level directory
 ```bash
-npm install
-cd packages/{your-directory-name}
+npm run install:root
+cd example-apps/jsx/lti-embedded-app
 npm install
 ```
-...or simply run `npm install:all` in the root directory
 
 ## How to run tests
 
@@ -49,7 +48,7 @@ This will open a server on port 4321 (http://localhost:4321) that will serve up 
 
 ## Javascript
 
-Although we encourage the use of React for UI development, this is entirely optional. Start by modifying the javascript in `src/index.jsx` or change this file extension to `.js` for a vanilla javascript implementation or another preferred framework.
+Although we encourage the use of React for UI development, this is entirely optional. You can find getting started packages written in different languages/frameworks in the `/example-apps/getting-started` folder. Start by modifying the javascript in `src/index.jsx` or change this file extension to `.js` for a vanilla javascript implementation.
 
 Note: Testing is initially configured to use Enzyme, "a Javascript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output." Read the docs here [http://airbnb.io/enzyme/].
 
@@ -70,4 +69,5 @@ Add scss files by importing them directly into any .js or .jsx file. Webpack wil
 Additionally, find access to some common utilities/libraries that we have included to help match the styling and UX choices found in Ultra UI. We have also included various javascript utilities that we find helpful for our internal development workflow.
 
 Simply add an import to the top of a file, ie.
-`import { someUtility } from '/libraries'`
+`import { someUtility } from 'bb-public-library/utilities'`
+`import { SomeComponent } from 'bb-public-library/react-components'`

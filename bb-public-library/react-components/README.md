@@ -4,12 +4,9 @@ We have included this helper components to provide common Blackboard structural 
 ## How to Include a component
 Simply add an import to the top of a file, ie.
 ```javascript
-import { Spinner } from '../bb-public-library/react-components/lib'
+import { Spinner } from 'bb-public-library/react-components'
 ```
 NOTE: Typescript requires a different import format for resolving .js files
 ```javascript
-import { Spinner } from '../bb-public-library/react-components/lib/index.js'
+import { Spinner } from 'bb-public-library/react-components/index.js'
 ```
-
-TODO: Verify support for tree-shaking
-TODO: Convert to Typescript
