@@ -13,15 +13,22 @@ for d in bb-public-library/*; do
     cd ../..
 done
 
+# Only run command on library if this is a root only operation
+if [ "$2" = "rootOnly" ]
+then
+    echo -e ${YELLOW}"'${1}' command run on all Libraries!"${NC}
+    exit
+fi
+
 # Apply command to all getting-started apps
-for d in getting-started/*; do
+for d in example-apps/getting-started/*; do
     cd ${d}
     if [ -f package.json ]
     then
         echo -e ${YELLOW}"Running command '${1}': ${d}"${NC}
         eval $1
     fi
-    cd ../..
+    cd ../../..
 done
 
 # Apply command to all js example apps

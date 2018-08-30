@@ -2,12 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const parts = require('../../webpack.parts');
+const parts = require('../../../webpack.parts');
 
 const PATHS = {
     app: path.join(__dirname, 'src'),
     build: path.join(__dirname, 'build'),
-    reactComponents: path.join(__dirname, '../bb-public-library/react-components'),
+    reactComponents: path.join(__dirname, '../../../bb-public-library/react-components'),
     public: '/',
 };
 
@@ -25,9 +25,9 @@ const common = merge([
         resolve: {
             extensions: ['.js', '.jsx', '.json'],
             alias: {
-                'bb-public-library/react-components': path.join(__dirname, '../../bb-public-library/react-components/lib'),
-                'bb-public-library/styles': path.join(__dirname, '../../bb-public-library/styles/lib'),
-                'bb-public-library/utilities': path.join(__dirname, '../../bb-public-library/utilities/lib'),
+                'bb-public-library/react-components': path.join(__dirname, '../../../bb-public-library/react-components/lib'),
+                'bb-public-library/styles': path.join(__dirname, '../../../bb-public-library/styles/lib'),
+                'bb-public-library/utilities': path.join(__dirname, '../../../bb-public-library/utilities/lib'),
             },
         },
         plugins: [

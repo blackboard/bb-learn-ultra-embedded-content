@@ -4,7 +4,7 @@ This repo provides *getting started* project directories (node packages) as well
 # Getting Started
 
 ## Setting Things Up
-You can simply run `npm install` to install the root level devDependencies that are used by all librarys/example-apps, then `cd` into the respective folder, run `npm install` , and use the scripts provided in the (sub-package) `package.json` to install, develop, run locally, test, and eventually build/compile to the (sub-package) `/build` directory. `npm start` will serve the app locally at **http://localhost:4321**. This will output a `bundle.js`, `bundle.js.map`, `index.html`, `styles.css`, and `styles.css.map`. Some commands may require prepending with `sudo` depending on your local configuration.
+You can simply enter `npm run install:root` to install the root level devDependencies and libraries that are used by all example-apps, then `cd` into the respective folder, run `npm install` , and use the scripts provided in the (sub-package) `package.json` to install, develop, run locally, test, and eventually build/compile to the (sub-package) `/build` directory. `npm start` will serve the app locally at **http://localhost:4321**. This will output a `bundle.js`, `bundle.js.map`, `index.html`, `styles.css`, and `styles.css.map`. Some commands may require prepending with `sudo` depending on your local configuration.
 
 For example:
 ```bash
@@ -17,15 +17,15 @@ npm start
 ```
 
 ## Next Steps
-To build your own LTI User Interface, duplicate one of the directories from `/getting-started` and rename it. Work from the new directory to develop and test locally. Run `npm start` to see the app running in a local browser at **http://localhost:4321**. The code base attempts to provide a working knowledge of how PostMessage works to communicate data in the form of JSON to and from Bb Learn. Be creative and build off of this as a starting point. When the app is tested and complete run `npm build` to output static HTML, CSS, and Javascript to the build folder. These files can then be hosted on a server at a URI that Learn can connect to in order to display your LTI app UI.
+To build your own LTI User Interface, duplicate one of the directories from `/example-apps/getting-started` and rename it. Work from the new directory to develop and test locally. Run `npm start` to see the app running in a local browser at **http://localhost:4321**. The code base attempts to provide a working knowledge of how PostMessage works to communicate data in the form of JSON to and from Bb Learn. Be creative and build off of this as a starting point. When the app is tested and complete run `npm build` to output static HTML, CSS, and Javascript to the build folder. These files can then be hosted on a server at a URI that Learn can connect to in order to display your LTI app UI.
 
 For example:
 ```bash
 git clone https://github.com/blackboard/bb-learn-ultra-embedded-content.git
 cd bb-learn-ultra-embedded-content
 npm install
-cp getting-started/typescript-react getting-started/my-awesome-app -a
-cd getting-started/my-awesome-app
+cp example-apps/getting-started/typescript-react example-apps/getting-started/my-awesome-app -a
+cd example-apps/getting-started/my-awesome-app
 npm install
 npm start
 ```
@@ -122,7 +122,7 @@ Example 1
 > 'content': 'object containing 'dataContent' and 'dataType' for editing existing mashups
 
 # More Info
-Check the `getting-started/typescript-react` or `getting-started/javascript-react` directory for step-by-step instructions to create and develop a new LTI single page application for launch. This is a good starting point for understanding the front-end communcation between Blackboard Learn Ultra's `Window` and the `iFrame` that your LTI app will launch in.
+Check the `example-apps/getting-started/typescript-react` or `example-apps/getting-started/javascript-react` directory for step-by-step instructions to create and develop a new LTI single page application for launch. This is a good starting point for understanding the front-end communcation between Blackboard Learn Ultra's `Window` and the `iFrame` that your LTI app will launch in.
 
 # Helper Utilities and Libraries
 Find access to some common utilities/libraries that we have included to help match the styling and UX choices found in Ultra UI. We have also included various javascript utilities that we find helpful for our internal development workflow.

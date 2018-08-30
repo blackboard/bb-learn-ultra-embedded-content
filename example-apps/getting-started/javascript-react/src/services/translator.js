@@ -1,5 +1,5 @@
+import { configureTranslator } from 'bb-public-library/utilities';
 import locales from '../locales';
-import { configureTranslator } from '../../../../bb-public-library/utilities/lib';
 
 const translator = configureTranslator(locales);
 
