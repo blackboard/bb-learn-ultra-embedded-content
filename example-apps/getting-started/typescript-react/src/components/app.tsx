@@ -7,7 +7,7 @@ import {
 import translator from '../services/translator';
 
 declare global {
-    interface Document { origin: string; } // tslint:disable-line:interface-name
+    interface Window { origin: string; } // tslint:disable-line:interface-name
 }
 
 interface IApp {
