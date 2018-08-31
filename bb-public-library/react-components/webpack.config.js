@@ -24,7 +24,7 @@ const common = merge([
         resolve: {
             extensions: ['.js', '.jsx', '.json', '.scss'],
             alias: {
-                'bb-public-library/styles': path.join(__dirname, '../styles/lib'),
+                'bb-public-library/styles': path.join(__dirname, '../styles'),
                 'bb-public-library/utilities': path.join(__dirname, '../utilities/lib'),
             },
         },

@@ -2,11 +2,6 @@ const path = require('path');
 
 // .eslintrc.js
 module.exports = {
-}
-  const path = require('path');
-
-// .eslintrc.js
-module.exports = {
     env: {
         browser: true,
         jest: true

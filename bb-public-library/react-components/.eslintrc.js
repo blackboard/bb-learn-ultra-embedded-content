@@ -25,7 +25,7 @@ module.exports = {
             // NOTE: These aliases must match aliases in webpack.config.js
             alias: {
                 map: [
-                    ['bb-public-library/styles/*', path.join(__dirname, '../styles/lib')],
+                    ['bb-public-library/styles/*', path.join(__dirname, '../styles')],
                     ['bb-public-library/utilities', path.join(__dirname, '../utilities/lib')],
                 ],
                 extensions: ['.js', '.jsx', '.json', '.scss']

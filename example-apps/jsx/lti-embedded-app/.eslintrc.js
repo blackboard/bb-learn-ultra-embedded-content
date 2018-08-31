@@ -26,7 +26,7 @@ module.exports = {
             alias: {
                 map: [
                     ['bb-public-library/react-components/*', path.join(__dirname, '../../../bb-public-library/react-components/lib')],
-                    ['bb-public-library/styles/*', path.join(__dirname, '../../../bb-public-library/styles/lib')],
+                    ['bb-public-library/styles/*', path.join(__dirname, '../../../bb-public-library/styles')],
                     ['bb-public-library/utilities/*', path.join(__dirname, '../../../bb-public-library/utilities/lib')],
                 ],
                 extensions: ['.js', '.jsx', '.json', '.scss']

@@ -15,7 +15,7 @@
 		"paths": {
 			"react": ["node_modules/@types/react"],
 			"bb-public-library/react-components/*": ["../../../bb-public-library/react-components/lib/*"],
-            "bb-public-library/styles/*": ["../../../bb-public-library/styles/lib/*"],
+            "bb-public-library/styles/*": ["../../../bb-public-library/styles/*"],
             "bb-public-library/utilities": ["../../../bb-public-library/utilities/lib"],
 		},
 		"pretty": true,
