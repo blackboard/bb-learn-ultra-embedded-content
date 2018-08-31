@@ -29,7 +29,7 @@ class App extends React.Component {
         this.YouTubeService = new YouTubeService();
         this.searchContainer = configureSearchContainer(this.YouTubeService, SearchResult);
         this.translate = (key, params) => translator('en', key, params);
-        this.origin = document.referrer ? new URL(document.referrer).origin : document.origin;
+        this.origin = document.referrer ? new URL(document.referrer).origin : window.origin;
 
         this.getYouTubeConfig = this.getYouTubeConfig.bind(this);
         this.initSearch = this.initSearch.bind(this);

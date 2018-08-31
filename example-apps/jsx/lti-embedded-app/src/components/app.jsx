@@ -21,7 +21,7 @@ export default class App extends React.Component {
         };
 
         // Helper methods
-        this.origin = document.referrer ? new URL(document.referrer).origin : document.origin;
+        this.origin = document.referrer ? new URL(document.referrer).origin : window.origin;
         this.translate = (key, params) => translator('en', key, params);
 
         // Method binding
@@ -47,7 +47,7 @@ export default class App extends React.Component {
         //         locale: 'en',
         //     },
         //     messageType: MESSAGE_TYPES.incoming.initContent,
-        // }, document.origin);
+        // }, window.origin);
     }
 
     componentWillUnmount() {
@@ -63,13 +63,13 @@ export default class App extends React.Component {
     }
 
     postMessage(message) {
-        console.log('Message posted from LTI provider: ', message); // eslint-disable-line no-console
         window.parent.postMessage(message, this.origin);
     }
 
     receiveMessage(event) {
         // This is a security measure to ensure that we only respond to messages
         // that originated from a parent/referrer that is the window embedding this iFrame
+        console.log('this.origin !== event.origin', this.origin !== event.origin); // eslint-disable-line no-console
         if (this.origin !== event.origin) {
             return;
         }
@@ -79,6 +79,7 @@ export default class App extends React.Component {
             this.translate = (key, params) => translator(event.data.config.locale, key, params);
         }
 
+        console.log('receiveMessage data', event.data); // eslint-disable-line no-console
         if (event.data.messageType === MESSAGE_TYPES.incoming.initContent) {
             this.getLTIConfig(event.data.config);
         }

@@ -36,7 +36,7 @@ export default class App extends React.Component<IProps, IState> implements IApp
         };
 
         // Helper methods
-        this.origin = document.referrer ? new URL(document.referrer).origin : document.origin;
+        this.origin = document.referrer ? new URL(document.referrer).origin : window.origin;
         this.translate = (key: string, params: object) => translator('en', key, params);
 
         // Method binding
@@ -61,7 +61,7 @@ export default class App extends React.Component<IProps, IState> implements IApp
                 locale: 'en',
             },
             messageType: MESSAGE_TYPES.incoming.initContent,
-        }, document.origin);
+        }, window.origin);
     }
 
     componentWillUnmount() {

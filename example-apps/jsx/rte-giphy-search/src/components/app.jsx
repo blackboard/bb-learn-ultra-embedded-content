@@ -31,7 +31,7 @@ export default class App extends React.Component {
         // Helper methods
         this.GiphyService = new GiphyService();
         this.searchContainer = configureSearchContainer(this.GiphyService, SearchResult);
-        this.origin = document.referrer ? new URL(document.referrer).origin : document.origin;
+        this.origin = document.referrer ? new URL(document.referrer).origin : window.origin;
         this.translate = (key, params) => translator('en', key, params);
 
         // Method binding
@@ -62,7 +62,7 @@ export default class App extends React.Component {
                 locale: 'en',
             },
             messageType: MESSAGE_TYPES.incoming.initContent,
-        }, document.origin);
+        }, window.origin);
     }
 
     componentWillUnmount() {
