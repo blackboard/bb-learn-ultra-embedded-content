@@ -2,16 +2,21 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 set -e
 
-# The bb-public-library install command must happen first to ensure cross-package dependencies
-for d in bb-public-library/*; do
-    cd ${d}
+# The bb-public-library utilities then react-components commands must happen first to ensure cross-package dependencies
+pushd bb-public-library/utilities;
     if [ -f package.json ]
     then
-        echo -e ${YELLOW}"Running command '${1}': ${d}"${NC}
+        echo -e ${YELLOW}"Running command '${1}': bb-public-library/utilities"${NC}
         eval $1
     fi
-    cd ../..
-done
+popd
+pushd bb-public-library/react-components;
+    if [ -f package.json ]
+    then
+        echo -e ${YELLOW}"Running command '${1}': bb-public-library/react-components"${NC}
+        eval $1
+    fi
+popd
 
 # Only run command on library if this is a root only operation
 if [ "$2" = "rootOnly" ]

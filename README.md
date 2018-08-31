@@ -10,7 +10,7 @@ For example:
 ```bash
 git clone https://github.com/blackboard/bb-learn-ultra-embedded-content.git
 cd bb-learn-ultra-embedded-content
-npm install
+npm run install:root
 cd example-apps/jsx/rte-giphy-search
 npm install
 npm start
